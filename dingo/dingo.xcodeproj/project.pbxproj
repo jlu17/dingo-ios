@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100233C12081593000C3E08D /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100233C02081593000C3E08D /* HomepageViewController.swift */; };
+		100233C820816ECF00C3E08D /* FirebaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100233C720816ECF00C3E08D /* FirebaseAPIClient.swift */; };
+		100233CA20816F1800C3E08D /* FacebookAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100233C920816F1800C3E08D /* FacebookAPIClient.swift */; };
+		100233CC2081752900C3E08D /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100233CB2081752900C3E08D /* ProgressViewController.swift */; };
+		101E5B5F207B08E4007783C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */; };
+		101E5B61207B38A5007783C2 /* SelectFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */; };
+		101E5B63207B3BC1007783C2 /* SelectMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E5B62207B3BC1007783C2 /* SelectMapViewController.swift */; };
+		103474F1209A3D78006CD645 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103474F0209A3D78006CD645 /* User.swift */; };
 		105F22B32060AA6A00ABF98E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22B22060AA6A00ABF98E /* AppDelegate.swift */; };
-		105F22B52060AA6A00ABF98E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22B42060AA6A00ABF98E /* ViewController.swift */; };
 		105F22B82060AA6A00ABF98E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105F22B62060AA6A00ABF98E /* Main.storyboard */; };
 		105F22BA2060AA6A00ABF98E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105F22B92060AA6A00ABF98E /* Assets.xcassets */; };
 		105F22BD2060AA6A00ABF98E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105F22BB2060AA6A00ABF98E /* LaunchScreen.storyboard */; };
 		105F22C82060AA6A00ABF98E /* dingoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22C72060AA6A00ABF98E /* dingoTests.swift */; };
 		105F22D32060AA6A00ABF98E /* dingoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22D22060AA6A00ABF98E /* dingoUITests.swift */; };
+		1084436B2075BF93007EBF69 /* FBLoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1084436A2075BF93007EBF69 /* FBLoginPage.swift */; };
+		42094D95B9F016D9E2E10435 /* Pods_dingoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4B718A89A09C605B48CE7D /* Pods_dingoUITests.framework */; };
+		441D9C9C2E1B9614DE5DE2F1 /* Pods_dingoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52690642EBCD4C064F0FEE8B /* Pods_dingoTests.framework */; };
+		F634DEA7E44B69E22DE49A66 /* Pods_dingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD81928D4C7D252336A5C37B /* Pods_dingo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		100233C02081593000C3E08D /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		100233C720816ECF00C3E08D /* FirebaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPIClient.swift; sourceTree = "<group>"; };
+		100233C920816F1800C3E08D /* FacebookAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIClient.swift; sourceTree = "<group>"; };
+		100233CB2081752900C3E08D /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		101E5B5D207AE738007783C2 /* dingo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dingo.entitlements; sourceTree = "<group>"; };
+		101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendsViewController.swift; sourceTree = "<group>"; };
+		101E5B62207B3BC1007783C2 /* SelectMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMapViewController.swift; sourceTree = "<group>"; };
+		103474F0209A3D78006CD645 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		105F22AF2060AA6A00ABF98E /* dingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105F22B22060AA6A00ABF98E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		105F22B42060AA6A00ABF98E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		105F22B72060AA6A00ABF98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		105F22B92060AA6A00ABF98E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105F22BC2060AA6A00ABF98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +66,16 @@
 		105F22CE2060AA6A00ABF98E /* dingoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dingoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		105F22D22060AA6A00ABF98E /* dingoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dingoUITests.swift; sourceTree = "<group>"; };
 		105F22D42060AA6A00ABF98E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1084436A2075BF93007EBF69 /* FBLoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginPage.swift; sourceTree = "<group>"; };
+		18CFC1EDFE90A2B77D3552CC /* Pods-dingoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingoTests/Pods-dingoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B4B718A89A09C605B48CE7D /* Pods_dingoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dingoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34DFA942B4130399CBB3C116 /* Pods-dingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingo.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingo/Pods-dingo.release.xcconfig"; sourceTree = "<group>"; };
+		52690642EBCD4C064F0FEE8B /* Pods_dingoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dingoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		542450A599C994B929E875BC /* Pods-dingoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingoUITests/Pods-dingoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5454DCFE9B5B1C7D68A821E3 /* Pods-dingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dingo/Pods-dingo.debug.xcconfig"; sourceTree = "<group>"; };
+		6984872C4B0CCDEC98FC5E4E /* Pods-dingoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dingoUITests/Pods-dingoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		844CB0F91B435840B4302642 /* Pods-dingoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dingoTests/Pods-dingoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD81928D4C7D252336A5C37B /* Pods_dingo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dingo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F634DEA7E44B69E22DE49A66 /* Pods_dingo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				441D9C9C2E1B9614DE5DE2F1 /* Pods_dingoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +99,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42094D95B9F016D9E2E10435 /* Pods_dingoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100233C220816E2400C3E08D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				103474F0209A3D78006CD645 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		100233C320816E2D00C3E08D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		100233C420816E3200C3E08D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */,
+				101E5B62207B3BC1007783C2 /* SelectMapViewController.swift */,
+				1084436A2075BF93007EBF69 /* FBLoginPage.swift */,
+				100233CB2081752900C3E08D /* ProgressViewController.swift */,
+				100233C02081593000C3E08D /* HomepageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		100233C620816E8700C3E08D /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				100233C720816ECF00C3E08D /* FirebaseAPIClient.swift */,
+				100233C920816F1800C3E08D /* FacebookAPIClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
 		105F22A62060AA6A00ABF98E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +149,8 @@
 				105F22C62060AA6A00ABF98E /* dingoTests */,
 				105F22D12060AA6A00ABF98E /* dingoUITests */,
 				105F22B02060AA6A00ABF98E /* Products */,
+				66C71978BEB1F41E75377B62 /* Pods */,
+				1B3D5586CC86E4CC9A388D24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +167,17 @@
 		105F22B12060AA6A00ABF98E /* dingo */ = {
 			isa = PBXGroup;
 			children = (
+				101E5B5D207AE738007783C2 /* dingo.entitlements */,
 				105F22B22060AA6A00ABF98E /* AppDelegate.swift */,
-				105F22B42060AA6A00ABF98E /* ViewController.swift */,
-				105F22B62060AA6A00ABF98E /* Main.storyboard */,
+				100233C620816E8700C3E08D /* Clients */,
+				100233C220816E2400C3E08D /* Models */,
 				105F22B92060AA6A00ABF98E /* Assets.xcassets */,
 				105F22BB2060AA6A00ABF98E /* LaunchScreen.storyboard */,
+				105F22B62060AA6A00ABF98E /* Main.storyboard */,
 				105F22BE2060AA6A00ABF98E /* Info.plist */,
+				100233C320816E2D00C3E08D /* Cells */,
+				100233C420816E3200C3E08D /* Controllers */,
+				101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */,
 			);
 			path = dingo;
 			sourceTree = "<group>";
@@ -125,6 +200,29 @@
 			path = dingoUITests;
 			sourceTree = "<group>";
 		};
+		1B3D5586CC86E4CC9A388D24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD81928D4C7D252336A5C37B /* Pods_dingo.framework */,
+				52690642EBCD4C064F0FEE8B /* Pods_dingoTests.framework */,
+				2B4B718A89A09C605B48CE7D /* Pods_dingoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66C71978BEB1F41E75377B62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5454DCFE9B5B1C7D68A821E3 /* Pods-dingo.debug.xcconfig */,
+				34DFA942B4130399CBB3C116 /* Pods-dingo.release.xcconfig */,
+				844CB0F91B435840B4302642 /* Pods-dingoTests.debug.xcconfig */,
+				18CFC1EDFE90A2B77D3552CC /* Pods-dingoTests.release.xcconfig */,
+				6984872C4B0CCDEC98FC5E4E /* Pods-dingoUITests.debug.xcconfig */,
+				542450A599C994B929E875BC /* Pods-dingoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 105F22D72060AA6A00ABF98E /* Build configuration list for PBXNativeTarget "dingo" */;
 			buildPhases = (
+				136745CF1CE3E620F28ABB5E /* [CP] Check Pods Manifest.lock */,
 				105F22AB2060AA6A00ABF98E /* Sources */,
 				105F22AC2060AA6A00ABF98E /* Frameworks */,
 				105F22AD2060AA6A00ABF98E /* Resources */,
+				2E67EC2C91CF35F1EABB7DD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 105F22DA2060AA6A00ABF98E /* Build configuration list for PBXNativeTarget "dingoTests" */;
 			buildPhases = (
+				1ECC6C468F3FB44DDCD5DE75 /* [CP] Check Pods Manifest.lock */,
 				105F22BF2060AA6A00ABF98E /* Sources */,
 				105F22C02060AA6A00ABF98E /* Frameworks */,
 				105F22C12060AA6A00ABF98E /* Resources */,
@@ -167,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 105F22DD2060AA6A00ABF98E /* Build configuration list for PBXNativeTarget "dingoUITests" */;
 			buildPhases = (
+				58A00ADC121B82C07315C64A /* [CP] Check Pods Manifest.lock */,
 				105F22CA2060AA6A00ABF98E /* Sources */,
 				105F22CB2060AA6A00ABF98E /* Frameworks */,
 				105F22CC2060AA6A00ABF98E /* Resources */,
@@ -194,6 +296,11 @@
 					105F22AE2060AA6A00ABF98E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					105F22C22060AA6A00ABF98E = {
 						CreatedOnToolsVersion = 9.2;
@@ -233,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				105F22BD2060AA6A00ABF98E /* LaunchScreen.storyboard in Resources */,
+				101E5B5F207B08E4007783C2 /* GoogleService-Info.plist in Resources */,
 				105F22BA2060AA6A00ABF98E /* Assets.xcassets in Resources */,
 				105F22B82060AA6A00ABF98E /* Main.storyboard in Resources */,
 			);
@@ -254,12 +362,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		136745CF1CE3E620F28ABB5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dingo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1ECC6C468F3FB44DDCD5DE75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dingoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E67EC2C91CF35F1EABB7DD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-dingo/Pods-dingo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/LocationPicker/LocationPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LocationPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dingo/Pods-dingo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58A00ADC121B82C07315C64A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dingoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		105F22AB2060AA6A00ABF98E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				105F22B52060AA6A00ABF98E /* ViewController.swift in Sources */,
+				101E5B63207B3BC1007783C2 /* SelectMapViewController.swift in Sources */,
+				1084436B2075BF93007EBF69 /* FBLoginPage.swift in Sources */,
+				100233C12081593000C3E08D /* HomepageViewController.swift in Sources */,
+				100233CC2081752900C3E08D /* ProgressViewController.swift in Sources */,
+				101E5B61207B38A5007783C2 /* SelectFriendsViewController.swift in Sources */,
+				103474F1209A3D78006CD645 /* User.swift in Sources */,
+				100233CA20816F1800C3E08D /* FacebookAPIClient.swift in Sources */,
+				100233C820816ECF00C3E08D /* FirebaseAPIClient.swift in Sources */,
 				105F22B32060AA6A00ABF98E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,13 +638,19 @@
 		};
 		105F22D82060AA6A00ABF98E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5454DCFE9B5B1C7D68A821E3 /* Pods-dingo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = dingo/dingo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZF7M6387C2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = dingo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dingo-sep.dingo";
+				PRODUCT_BUNDLE_IDENTIFIER = sep.dingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,13 +659,19 @@
 		};
 		105F22D92060AA6A00ABF98E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DFA942B4130399CBB3C116 /* Pods-dingo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = dingo/dingo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZF7M6387C2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = dingo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dingo-sep.dingo";
+				PRODUCT_BUNDLE_IDENTIFIER = sep.dingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,6 +680,7 @@
 		};
 		105F22DB2060AA6A00ABF98E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 844CB0F91B435840B4302642 /* Pods-dingoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +698,7 @@
 		};
 		105F22DC2060AA6A00ABF98E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18CFC1EDFE90A2B77D3552CC /* Pods-dingoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +716,7 @@
 		};
 		105F22DE2060AA6A00ABF98E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6984872C4B0CCDEC98FC5E4E /* Pods-dingoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +733,7 @@
 		};
 		105F22DF2060AA6A00ABF98E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 542450A599C994B929E875BC /* Pods-dingoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

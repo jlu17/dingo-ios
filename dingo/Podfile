@@ -1,0 +1,23 @@
+platform :ios, '9.0'
+
+target 'dingo' do
+  use_frameworks!
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'LocationPicker'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/viccalexander/Chameleon.git', :branch => 'wip/swift4'
+  pod 'SwiftyJSON', '~> 4.0'
+  # Pods for dingo
+
+  target 'dingoTests' do
+    inherit! :search_paths
+  end
+
+  target 'dingoUITests' do
+    inherit! :search_paths
+  end
+
+end
