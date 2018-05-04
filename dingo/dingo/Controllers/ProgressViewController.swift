@@ -8,6 +8,7 @@
 
 import UIKit
 import ChameleonFramework
+import Gifu
 
 class ProgressViewController: UIViewController {
 
@@ -21,31 +22,41 @@ class ProgressViewController: UIViewController {
         drawContainers()
         drawLabels()
         drawCancelButton()
+//        drawGif()
         self.view.addSubview(container1)
     }
     
     func drawContainers() {
-        container1 = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 200))
-        container1.center =  CGPoint(x: container1.bounds.midX, y: container1.bounds.midY)
+        container1 = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.midY))
+        container1.center =  CGPoint(x: container1.frame.midX, y: container1.frame.midY * 1.5)
     }
+    
+//    func drawGif() {
+//        let imageView = GIFImageView(frame: CGRect(x: 0, y: 200, width: 200, height: 100))
+//        imageView.animate(withGIFNamed: "walking_man") {
+//            print("It's animating!")
+//        }
+//        self.view.addSubview(imageView)
+//    }
     
     func drawLabels() {
         progressLabel.text = "Going home..."
         progressLabel.textColor = FlatWhite()
+        progressLabel.font = progressLabel.font.withSize(20)
         progressLabel.textAlignment = .center
         progressLabel.frame = container1.frame
-    
         container1.addSubview(progressLabel)
     }
 
     func drawCancelButton() {
         cancelButton = UIButton()
         cancelButton.frame.size = CGSize(width: self.view.bounds.midX, height:  45)
-        cancelButton.center = self.view.center
+        cancelButton.center.x = self.view.bounds.midX
+        cancelButton.center.y = self.view.bounds.midY + 100
         cancelButton.backgroundColor = FlatWhite()
         cancelButton.tag = 1
         cancelButton.setTitle("Cancel, I'm safe.", for: [])
-        cancelButton.setTitleColor(FlatBlack(), for: [])
+        cancelButton.setTitleColor(FlatBlue(), for: [])
         cancelButton.addTarget(self, action: #selector(cancelJourney(_:)), for: .touchUpInside)
         
         self.view.addSubview(cancelButton)
@@ -59,17 +70,5 @@ class ProgressViewController: UIViewController {
         
         performSegue(withIdentifier: "unwindToHome", sender: self)
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

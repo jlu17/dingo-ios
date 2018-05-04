@@ -19,23 +19,34 @@ class SelectMapViewController: UIViewController {
     var long: Double!
     var pickLocButton: UIButton!
     var nextButton: UIButton!
-    var location: UILabel!
+    var location = UILabel()
     var container1 = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = FlatBlue()
-        name = "No location selected"
+        self.name = "No location selected"
+        drawLocation()
         drawLocButton()
         drawEndButton()
-        
-        container1 = UIView(frame: CGRect(x: 0, y: self.view.bounds.height / 2, width: self.view.bounds.width, height: self.view.bounds.height / 2))
-        container1.center =  CGPoint(x: self.view.bounds.midX, y: self.view.bounds.midY)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func drawLocation() {
+        container1 = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height / 2))
+        container1.center =  CGPoint(x: container1.frame.midX, y: container1.frame.midY)
+        location.lineBreakMode = NSLineBreakMode.byWordWrapping
+        location.numberOfLines = 0
+        location.text = "Current selection: " + name
+        location.textColor = FlatWhite()
+        location.textAlignment = .center
+        location.frame = container1.frame
+        container1.addSubview(location)
+        self.view.addSubview(container1)
     }
     
     func drawLocButton() {
@@ -79,6 +90,10 @@ class SelectMapViewController: UIViewController {
         locationPicker.mapType = .standard
         locationPicker.searchBarPlaceholder = "Search places"
         locationPicker.resultRegionDistance = 500 // default: 600
+        // let loc = CLLocation(latitude: 37.8716, longitude: -122.258423)
+        // let initialLocation = Location(name: "Berkeley", location: loc, placemark: CLPlacemark())
+        
+        //locationPicker.location = initialLocation
         
         locationPicker.completion = { location in
             self.longLat = location?.coordinate
@@ -91,7 +106,9 @@ class SelectMapViewController: UIViewController {
             
             print(self.longLat)
             // let newTitle = String(self.long) + ", " + String(self.lat)
-            self.pickLocButton.setTitle("Current location: " + self.name, for: [])
+            self.pickLocButton.setTitle("Change location", for: [])
+            self.name = String(self.long) + ", " + String(self.lat)
+            self.location.text = "Current selection: " + self.name
         }
         
         

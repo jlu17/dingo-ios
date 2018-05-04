@@ -46,6 +46,7 @@ PODS:
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
+  - Gifu (3.0.0)
   - GoogleToolboxForMac/DebugUtils (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/Defines (2.1.3)
@@ -72,6 +73,7 @@ DEPENDENCIES:
   - FacebookShare
   - Firebase/Auth
   - Firebase/Core
+  - Gifu
   - LocationPicker
   - SwiftyJSON (~> 4.0)
 
@@ -89,6 +91,7 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseInstanceID
+    - Gifu
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - LocationPicker
@@ -119,12 +122,13 @@ SPEC CHECKSUMS:
   FirebaseAuth: 147bf340a0706b44ca1753d6b41ebafd9687cfe6
   FirebaseCore: b981f47e5254cbcfdeb483355300d743f6fcab2c
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  Gifu: 6543ca2056a3d697097c09fe543ef49348ccc892
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   LocationPicker: 94dbd15ee053646d5c275d44b4dfce8634d66041
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 128fe161466ce094d2f2997371f74d6f38b01592
+PODFILE CHECKSUM: 0df9a8bcd1c76c7077b3bd91c0f5f92b05b32f57
 
 COCOAPODS: 1.5.0

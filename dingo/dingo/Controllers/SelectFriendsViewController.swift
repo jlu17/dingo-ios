@@ -8,32 +8,28 @@
 
 import UIKit
 import ChameleonFramework
+import SwiftyJSON
 
 class SelectFriendsViewController: UIViewController {
 
     var userData: [String: AnyObject] = [:]
     var helloLabel = UILabel()
     var helloContainer: UIView!
+    var friendsJSON: JSON!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(userData)
         view.backgroundColor = FlatBlue()
+        print("did background")
         drawContainers()
+        print("did containers")
         drawHelloLabel()
+        print("did hello label")
         self.view.addSubview(helloContainer)
-
-        let nextButton = UIButton()
-        nextButton.backgroundColor = FlatWhite()
-        nextButton.tag = 1
-        nextButton.frame.size = CGSize(width: self.view.bounds.width / 2, height: self.view.bounds.width / 8)
-        nextButton.center.x = self.view.center.x
-        nextButton.center.y = self.view.center.y * 1.5
-        nextButton.setTitle("To map", for: [])
-        nextButton.setTitleColor(FlatBlue(), for: .normal)
-        nextButton.addTarget(self, action: #selector(pressNext(_:)), for: .touchUpInside)
-
-        self.view.addSubview(nextButton)
+        print("added container subview")
+        drawNextButton()
+        print("drew everything??")
     }
     
     func drawHelloLabel() {
@@ -48,6 +44,21 @@ class SelectFriendsViewController: UIViewController {
     func drawContainers() {
         helloContainer = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.midY))
         helloContainer.center =  CGPoint(x: helloContainer.frame.midX, y: helloContainer.frame.midY)
+    }
+    
+    func drawNextButton() {
+        let nextButton = UIButton()
+        nextButton.backgroundColor = FlatWhite()
+        nextButton.tag = 1
+        nextButton.frame.size = CGSize(width: self.view.bounds.width / 2, height: self.view.bounds.width / 8)
+        nextButton.center.x = self.view.center.x
+        nextButton.center.y = self.view.center.y * 1.5
+        nextButton.setTitle("To map", for: [])
+        nextButton.setTitleColor(FlatBlue(), for: .normal)
+        nextButton.addTarget(self, action: #selector(pressNext(_:)), for: .touchUpInside)
+        print("did all the nextButton's properties")
+        self.view.addSubview(nextButton)
+        print("added button to subview")
     }
 
     override func didReceiveMemoryWarning() {

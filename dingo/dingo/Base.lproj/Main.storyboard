@@ -10,20 +10,85 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--splash_screen-->
-        <scene sceneID="ATl-Mi-AgO">
+        <!--Settings-->
+        <scene sceneID="2oH-Rt-Vt6">
             <objects>
-                <viewController title="splash_screen" id="20H-e0-LhD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kax-jX-dcl">
+                <viewController storyboardIdentifier="Settings" title="Settings" id="1pf-Pf-5tj" customClass="SettingsViewController" customModule="dingo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oom-vi-B00">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="X90-1z-ihE"/>
+                        <viewLayoutGuide key="safeArea" id="HcG-E6-58r"/>
                     </view>
+                    <connections>
+                        <segue destination="9GR-Ip-XPx" kind="show" identifier="changeLoc" id="tQX-cL-2Kn"/>
+                        <segue destination="kZ6-VZ-7Y7" kind="show" identifier="changeFriend" id="AiY-Ic-eEU"/>
+                        <segue destination="gtj-nN-Sdf" kind="show" identifier="toAbout" id="EVB-HU-skj"/>
+                        <segue destination="imq-Jz-gCr" kind="unwind" identifier="unwindSegueToLogIn" unwindAction="unwindToStartWithSegue:" id="dK5-Js-dh0"/>
+                        <segue destination="imq-Jz-gCr" kind="unwind" identifier="settingsToHome" unwindAction="unwindToHomeWithSegue:" id="0mN-Wg-Aa9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="isx-rW-VUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J8u-4i-tHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="imq-Jz-gCr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="137" y="-539"/>
+            <point key="canvasLocation" x="2380" y="-636"/>
+        </scene>
+        <!--Change Location View Controller-->
+        <scene sceneID="0pK-aA-kKz">
+            <objects>
+                <viewController id="9GR-Ip-XPx" customClass="ChangeLocationViewController" customModule="dingo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cmG-Gh-gpy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="msg-qx-a94"/>
+                    </view>
+                    <connections>
+                        <segue destination="2YS-kX-dWz" kind="unwind" identifier="locationToHome" unwindAction="unwindToHomeWithSegue:" id="8y8-q7-joD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ux7-NJ-s6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2YS-kX-dWz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3217" y="-636"/>
+        </scene>
+        <!--Change_Friend-->
+        <scene sceneID="dEK-69-oKL">
+            <objects>
+                <viewController title="Change_Friend" id="kZ6-VZ-7Y7" customClass="ChangeFriendViewController" customModule="dingo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f4B-N7-AJs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hKe-O7-8rN"/>
+                    </view>
+                    <connections>
+                        <segue destination="GYs-sd-ur8" kind="unwind" identifier="friendsToHome" unwindAction="unwindToHomeWithSegue:" id="vez-gB-3oe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h16-yy-sDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GYs-sd-ur8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4073" y="-636"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="ebd-7J-Wht">
+            <objects>
+                <viewController id="gtj-nN-Sdf" customClass="AboutViewController" customModule="dingo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K89-am-Mod">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Hb8-oS-dfK"/>
+                    </view>
+                    <connections>
+                        <segue destination="ClZ-Xl-vjy" kind="unwind" identifier="aboutToHome" unwindAction="unwindToHomeWithSegue:" id="ytS-4c-2Dz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrc-MK-faG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ClZ-Xl-vjy" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4967" y="-636"/>
         </scene>
         <!--Homepage-->
         <scene sceneID="tne-QT-ifu">
@@ -37,6 +102,7 @@
                     </view>
                     <connections>
                         <segue destination="4pk-OR-w9w" kind="show" identifier="homepageToProgress" id="0rg-AB-PnQ"/>
+                        <segue destination="1pf-Pf-5tj" kind="show" identifier="toSettings" id="5Gp-hJ-dfs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,7 +120,7 @@
                         <viewLayoutGuide key="safeArea" id="dKl-Gd-ejV"/>
                     </view>
                     <connections>
-                        <segue destination="JDS-qX-Fcd" kind="unwind" identifier="unwindToHome" unwindAction="unwindToVC1WithSegue:" id="Zdm-sZ-QVa"/>
+                        <segue destination="JDS-qX-Fcd" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="Zdm-sZ-QVa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNu-r7-9sz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -73,7 +139,7 @@
                         <viewLayoutGuide key="safeArea" id="mOo-U6-QaW"/>
                     </view>
                     <connections>
-                        <segue destination="cax-No-5YI" kind="show" identifier="loginToFriends" id="DYK-f1-y9t"/>
+                        <segue destination="cax-No-5YI" kind="show" identifier="loginToFriends" id="kg5-aS-tn5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iY3-ex-8Dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
