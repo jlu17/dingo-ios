@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iPG-Za-nif">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iPG-Za-nif">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -126,7 +126,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNu-r7-9sz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="JDS-qX-Fcd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3218" y="90"/>
+            <point key="canvasLocation" x="3703" y="89"/>
         </scene>
         <!--Login Page-->
         <scene sceneID="7Rf-d1-GRe">
@@ -139,12 +139,28 @@
                         <viewLayoutGuide key="safeArea" id="mOo-U6-QaW"/>
                     </view>
                     <connections>
-                        <segue destination="cax-No-5YI" kind="show" identifier="loginToFriends" id="kg5-aS-tn5"/>
+                        <segue destination="1rY-lG-1cg" kind="show" identifier="loginToFriends" id="T56-Co-rVS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iY3-ex-8Dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="803"/>
+            <point key="canvasLocation" x="-970" y="803"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7hS-zS-x5d">
+            <objects>
+                <navigationController id="1rY-lG-1cg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mED-IB-AyJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cax-No-5YI" kind="relationship" relationship="rootViewController" id="Abe-S4-aPc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GL-68-rcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-95" y="803"/>
         </scene>
         <!--Select Friends-->
         <scene sceneID="sJ6-IJ-gSm">
@@ -156,6 +172,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6c1-2f-hXD"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XM0-kx-630"/>
                     <connections>
                         <segue destination="QrD-7Y-Ymh" kind="show" identifier="friendsToMap" id="yFn-dU-eiW"/>
                     </connections>
