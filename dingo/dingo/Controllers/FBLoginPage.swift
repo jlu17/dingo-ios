@@ -9,17 +9,22 @@ import UIKit
 import FBSDKLoginKit
 import Firebase
 import ChameleonFramework
-import SwiftyJSON
+import FirebaseDatabase
+
 
 class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
     var userData: [String: AnyObject] = [:]
     var dingo: UIImageView!
     var introLabel = UILabel()
     var container1: UIView!
-    var json: JSON!
+    var dbRef : DatabaseReference!
+    var id: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dbRef = Database.database().reference()
+        
         view.backgroundColor = FlatWhite()
         drawDingo()
         drawContainers()
@@ -27,6 +32,7 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
         drawLogInButton()
         self.view.addSubview(container1)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -71,59 +77,14 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
             return
         }
         
-//        let loginManager = FBSDKLoginManager()
-//        let permissions = ["public_profile", "email", "user_friends"]
-//        let handler = ...
-//            loginManager.logInWithReadPermissions(permissions, fromViewController: self, handler: handler)
-    
-        
-        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name"]).start(completionHandler: { (connection, result, error) -> Void in
-            if error != nil {
-                print("Failed to start graph request:", error!)
-                return
-            } else {
-                print("got public data")
-                self.userData = result as! [String : AnyObject]
-                print(result!)
-                print(self.userData)
-                //self.performSegue(withIdentifier: "loginToFriends", sender: self)
+        FacebookAPIClient().handleFBLogin { (success) -> Void in
+            if success {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                    print("segue-ing...")
+                    self.performSegue(withIdentifier: "loginToFriends", sender: nil)
+                })
             }
-        })
-        
-        FBSDKGraphRequest(graphPath: "/me/friends", parameters: ["fields":""]).start(completionHandler: { (connection, result, error) -> Void in
-            if error != nil {
-                print("Failed to start graph request:", error!)
-                return
-            } else {
-                print("got friend data")
-                self.json = JSON(result!)
-                let friendJSONArray = self.json["data"].arrayValue
-                for friendJSON in friendJSONArray {
-                    print(friendJSON["name"].stringValue)
-                    print(friendJSON["id"].intValue)
-                }
-//                let nextPageToken = self.json["paging"]["cursors"]["after"].stringValue
-//                let prevPageToken = self.json["paging"]["cursors"]["before"].stringValue
-                print("segue-ing...")
-                self.performSegue(withIdentifier: "loginToFriends", sender: self)
-            }
-        })
-        
-//        let graphRequest = FBSDKGraphRequest(graphPath: "/me/friends", parameters: params)
-//        let connection = FBSDKGraphRequestConnection()
-//        connection.add(graphRequest, completionHandler: { (connection, result, error) in
-//            if error == nil {
-//                if let userData = result as? [String:Any] {
-//                    print(userData)
-//                }
-//            } else {
-//                print("Error Getting Friends \(error)");
-//            }
-//
-//        })
-//
-//        connection.start()
-
+        }
     }
     
     // WHEN LOGOUT BUTTON IS LOGGED OUT
@@ -131,9 +92,8 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
         print("logged out")
         
         // TO IMPLEMENT INTO CUSTOM FB LOGIN HEREEEE
-        let firebaseAuth = Auth.auth()
         do {
-            try firebaseAuth.signOut()
+            try Auth.auth().signOut()
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
@@ -141,10 +101,14 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? SelectFriendsViewController {
+        print("in the prepare function")
+        if let destinationNavigationController = segue.destination as? UINavigationController {
+            let destination = destinationNavigationController.topViewController as! SelectFriendsViewController
             destination.userData = self.userData
-            destination.friendsJSON = self.json
+            destinationNavigationController.isNavigationBarHidden = true
         }
     }
     @IBAction func unwindToStart(segue:UIStoryboardSegue) { }
 }
+
+

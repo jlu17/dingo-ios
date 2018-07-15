@@ -22,10 +22,13 @@
 		105F22C82060AA6A00ABF98E /* dingoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22C72060AA6A00ABF98E /* dingoTests.swift */; };
 		105F22D32060AA6A00ABF98E /* dingoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22D22060AA6A00ABF98E /* dingoUITests.swift */; };
 		1084436B2075BF93007EBF69 /* FBLoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1084436A2075BF93007EBF69 /* FBLoginPage.swift */; };
+		1088897C20F16047001F961C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088897B20F16047001F961C /* Constants.swift */; };
+		1088897E20F1618E001F961C /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088897D20F1618E001F961C /* Journey.swift */; };
 		108CFF89209C1FFE003A6BB5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF88209C1FFE003A6BB5 /* SettingsViewController.swift */; };
 		108CFF8B209C200D003A6BB5 /* ChangeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF8A209C200D003A6BB5 /* ChangeLocationViewController.swift */; };
 		108CFF8D209C201C003A6BB5 /* ChangeFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF8C209C201C003A6BB5 /* ChangeFriendViewController.swift */; };
 		108CFF8F209C202A003A6BB5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF8E209C202A003A6BB5 /* AboutViewController.swift */; };
+		10AA3D4C20FC04C90076969A /* SwiftyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */; };
 		42094D95B9F016D9E2E10435 /* Pods_dingoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4B718A89A09C605B48CE7D /* Pods_dingoUITests.framework */; };
 		441D9C9C2E1B9614DE5DE2F1 /* Pods_dingoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52690642EBCD4C064F0FEE8B /* Pods_dingoTests.framework */; };
 		F634DEA7E44B69E22DE49A66 /* Pods_dingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD81928D4C7D252336A5C37B /* Pods_dingo.framework */; };
@@ -71,10 +74,13 @@
 		105F22D22060AA6A00ABF98E /* dingoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dingoUITests.swift; sourceTree = "<group>"; };
 		105F22D42060AA6A00ABF98E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1084436A2075BF93007EBF69 /* FBLoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginPage.swift; sourceTree = "<group>"; };
+		1088897B20F16047001F961C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1088897D20F1618E001F961C /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 		108CFF88209C1FFE003A6BB5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		108CFF8A209C200D003A6BB5 /* ChangeLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewController.swift; sourceTree = "<group>"; };
 		108CFF8C209C201C003A6BB5 /* ChangeFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFriendViewController.swift; sourceTree = "<group>"; };
 		108CFF8E209C202A003A6BB5 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyAPIClient.swift; sourceTree = "<group>"; };
 		18CFC1EDFE90A2B77D3552CC /* Pods-dingoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingoTests/Pods-dingoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B4B718A89A09C605B48CE7D /* Pods_dingoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dingoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DFA942B4130399CBB3C116 /* Pods-dingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingo.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingo/Pods-dingo.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				103474F0209A3D78006CD645 /* User.swift */,
+				1088897B20F16047001F961C /* Constants.swift */,
+				1088897D20F1618E001F961C /* Journey.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 			children = (
 				100233C720816ECF00C3E08D /* FirebaseAPIClient.swift */,
 				100233C920816F1800C3E08D /* FacebookAPIClient.swift */,
+				10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -431,6 +440,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/LocationPicker/LocationPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -448,6 +458,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LocationPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,10 +500,13 @@
 				103474F1209A3D78006CD645 /* User.swift in Sources */,
 				100233CA20816F1800C3E08D /* FacebookAPIClient.swift in Sources */,
 				108CFF8D209C201C003A6BB5 /* ChangeFriendViewController.swift in Sources */,
+				1088897E20F1618E001F961C /* Journey.swift in Sources */,
 				100233C820816ECF00C3E08D /* FirebaseAPIClient.swift in Sources */,
 				108CFF8B209C200D003A6BB5 /* ChangeLocationViewController.swift in Sources */,
+				1088897C20F16047001F961C /* Constants.swift in Sources */,
 				108CFF8F209C202A003A6BB5 /* AboutViewController.swift in Sources */,
 				105F22B32060AA6A00ABF98E /* AppDelegate.swift in Sources */,
+				10AA3D4C20FC04C90076969A /* SwiftyAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
