@@ -11,25 +11,21 @@ import ChameleonFramework
 import SwiftyJSON
 
 class SelectFriendsViewController: UIViewController {
-
     var userData: [String: AnyObject] = [:]
     var helloLabel = UILabel()
     var helloContainer: UIView!
-    var friendsJSON: JSON!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(userData)
+        let currentUser = User()
+        
+        //displaying stuff on the screen
         view.backgroundColor = FlatBlue()
-        print("did background")
         drawContainers()
-        print("did containers")
         drawHelloLabel()
-        print("did hello label")
         self.view.addSubview(helloContainer)
-        print("added container subview")
         drawNextButton()
-        print("drew everything??")
     }
     
     func drawHelloLabel() {
