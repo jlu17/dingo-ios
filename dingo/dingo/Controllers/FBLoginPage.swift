@@ -13,12 +13,12 @@ import FirebaseDatabase
 
 
 class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
-    var userData: [String: AnyObject] = [:]
     var dingo: UIImageView!
     var introLabel = UILabel()
     var container1: UIView!
     var dbRef : DatabaseReference!
     var id: String!
+    var newUser: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +79,7 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
         
         FacebookAPIClient().handleFBLogin { (success) -> Void in
             if success {
+                self.newUser = User()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                     print("segue-ing...")
                     self.performSegue(withIdentifier: "loginToFriends", sender: nil)
@@ -101,11 +102,10 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("in the prepare function")
         if let destinationNavigationController = segue.destination as? UINavigationController {
-            let destination = destinationNavigationController.topViewController as! SelectFriendsViewController
-            destination.userData = self.userData
             destinationNavigationController.isNavigationBarHidden = true
+            let destination = destinationNavigationController.topViewController as! SelectFriendsViewController
+            destination.currentUser = newUser
         }
     }
     @IBAction func unwindToStart(segue:UIStoryboardSegue) { }

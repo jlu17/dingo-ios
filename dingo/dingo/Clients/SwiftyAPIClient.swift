@@ -22,6 +22,7 @@ class SwiftyAPIClient {
         let firebaseClient = FirebaseAPIClient()
         
         let json = JSON(result)
+        print(json)
         let friendJSONArray = json["data"].arrayValue
         
         //iterate through friends list and save to Firebase

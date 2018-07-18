@@ -11,17 +11,25 @@ import FirebaseDatabase
 
 class FirebaseAPIClient {
     var dbRef: DatabaseReference!
-    
     init() {
         dbRef = Database.database().reference()
     }
     
-    func setDatabaseName(id: String, name: String) {
-        self.dbRef.child("Users").child(id).child("name").setValue(name)
-    }
-    
     func setDatabaseFriend(id: String, friendID: String, friendName: String) {
         self.dbRef.child("Users").child(id).child("friends").child(friendID).setValue(friendName)
+    }
+    
+    func updateDatabaseUser(info: [String: AnyObject]) {
+        let id = info["id"] as! String
+        let firebaseUser = self.dbRef.child("Users").child(id)
+        
+        firebaseUser.child("first_name").setValue(info["first_name"] as! String)
+        firebaseUser.child("last_name").setValue(info["last_name"] as! String)
+        firebaseUser.child("name").setValue(info["name"] as! String)
+        
+        let picture = info["picture"] as! [String: AnyObject]
+        let pictureData = picture["data"] as! [String: AnyObject]
+        firebaseUser.child("photo").setValue(pictureData["url"] as! String)
     }
     
 }

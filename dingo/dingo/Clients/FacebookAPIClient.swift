@@ -29,7 +29,7 @@ class FacebookAPIClient {
             
             print("===Logged into Firebase successfully===")
             
-            FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name"]).start(completionHandler: { (connection, result, error) -> Void in
+            FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, first_name, last_name, picture"]).start(completionHandler: { (connection, result, error) -> Void in
                 if error != nil {
                     print("Failed to start graph request:", error!)
                     return
@@ -39,8 +39,7 @@ class FacebookAPIClient {
                 let userData = result as! [String : AnyObject]
                 print("userData: ", result!)
                 
-                let id = userData["id"] as! String
-                firebaseClient.setDatabaseName(id: id, name: userData["name"] as! String)
+                firebaseClient.updateDatabaseUser(info: userData)
                 // self.dbRef.child("Users").child(id).child("setup").setValue(true)
                 
                 //friends list
@@ -50,11 +49,16 @@ class FacebookAPIClient {
                         return
                     }
                     print("===Got friend data from FBSDKGraphRequest===")
-                    swiftyClient.handleFriendsList(id: id, result: result! as! NSDictionary)
+                    swiftyClient.handleFriendsList(id: userData["id"] as! String, result: result! as! NSDictionary)
                     
                     completion(true)
                 })
             })
         }
+    }
+    
+    func getFacebookID() -> String {
+        
+        return FBSDKAccessToken.current().userID
     }
 }

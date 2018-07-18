@@ -8,6 +8,4 @@
 
 import Foundation
 
-class Constants {
-    
-}
+let mainFont = "Avenir-Medium"

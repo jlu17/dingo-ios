@@ -29,6 +29,7 @@
 		108CFF8D209C201C003A6BB5 /* ChangeFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF8C209C201C003A6BB5 /* ChangeFriendViewController.swift */; };
 		108CFF8F209C202A003A6BB5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF8E209C202A003A6BB5 /* AboutViewController.swift */; };
 		10AA3D4C20FC04C90076969A /* SwiftyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */; };
+		10AA3D4E20FC6CA70076969A /* SelectFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA3D4D20FC6CA70076969A /* SelectFriendsTableViewCell.swift */; };
 		42094D95B9F016D9E2E10435 /* Pods_dingoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4B718A89A09C605B48CE7D /* Pods_dingoUITests.framework */; };
 		441D9C9C2E1B9614DE5DE2F1 /* Pods_dingoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52690642EBCD4C064F0FEE8B /* Pods_dingoTests.framework */; };
 		F634DEA7E44B69E22DE49A66 /* Pods_dingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD81928D4C7D252336A5C37B /* Pods_dingo.framework */; };
@@ -81,6 +82,7 @@
 		108CFF8C209C201C003A6BB5 /* ChangeFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFriendViewController.swift; sourceTree = "<group>"; };
 		108CFF8E209C202A003A6BB5 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyAPIClient.swift; sourceTree = "<group>"; };
+		10AA3D4D20FC6CA70076969A /* SelectFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		18CFC1EDFE90A2B77D3552CC /* Pods-dingoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingoTests/Pods-dingoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B4B718A89A09C605B48CE7D /* Pods_dingoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dingoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DFA942B4130399CBB3C116 /* Pods-dingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingo.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingo/Pods-dingo.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		100233C320816E2D00C3E08D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				10AA3D4D20FC6CA70076969A /* SelectFriendsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				108CFF8B209C200D003A6BB5 /* ChangeLocationViewController.swift in Sources */,
 				1088897C20F16047001F961C /* Constants.swift in Sources */,
 				108CFF8F209C202A003A6BB5 /* AboutViewController.swift in Sources */,
+				10AA3D4E20FC6CA70076969A /* SelectFriendsTableViewCell.swift in Sources */,
 				105F22B32060AA6A00ABF98E /* AppDelegate.swift in Sources */,
 				10AA3D4C20FC04C90076969A /* SwiftyAPIClient.swift in Sources */,
 			);

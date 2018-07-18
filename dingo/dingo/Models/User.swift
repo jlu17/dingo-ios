@@ -12,30 +12,32 @@ import FirebaseDatabase
 
 class User {
 //    var photo: String //must be stored as a string for the filename.
-    var friends: [String]
-//    var name: String
-//    var id: String   //A unique ID that is used to persist data about the user to the database (Firebase).
+    var friends: [String: String] = [:]
+    var name = ""
+    var firebaseID: String
+    var facebookID: String
     let dbRef = Database.database().reference()
+    var friendsSelected: [String] = []
 
-    init() {
-//        let currentUser = Auth.auth().currentUser
-//        print(currentUser!)
-//        self.id = (currentUser?.uid)!
-//        dbRef.child("Users").child(self.id).child("name").setValue(currentUser?.displayName)
+    init () {
+        // Do something
+        let currentUser = Auth.auth().currentUser
+        print("current user: ", currentUser!)
+        self.firebaseID = (currentUser?.uid)!
+        self.facebookID = FacebookAPIClient().getFacebookID()
+        print("facebookID: ", self.facebookID)
         
-        // self.name = dbRef.child("Users").child(id).value(forKey: id) as! String
-        // print(self.name, " ", self.id)
-        friends = []
+        dbRef.child("Users").child(self.facebookID).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.name = value?["name"] as! String
+            print("self.name: ", self.name)
+            self.friends = value?["friends"] as! [String: String]
+        }) { (error) in
+            print("Error reading user: ", error.localizedDescription)
+        }
+    }
     
-//        dbRef.child("Users").child(id).child("friends").observeSingleEvent(of: .value, with: { (snapshot) in
-//            let arr = snapshot.value as? [String:String]
-//            print("arr: ", arr!)
-//            if arr != nil {
-//                for (_, value) in arr! {
-//                    postArray.append(value)
-//                }
-//            }
-//        })
-        
+    func numberOfFriends() -> Int {
+        return friends.count
     }
 }
