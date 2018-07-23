@@ -17,7 +17,7 @@ class User {
     var firebaseID: String
     var facebookID: String
     let dbRef = Database.database().reference()
-    var friendsSelected: [String] = []
+    var friendsSelected: [String: String] = [:]
 
     init () {
         // Do something

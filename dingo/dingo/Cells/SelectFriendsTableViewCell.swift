@@ -15,12 +15,13 @@ class SelectFriendsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        friendName = UILabel(frame: CGRect(x:40, y:18, width: 240, height:30))
+        let frame = contentView.frame.size
+        friendName = UILabel(frame: CGRect(x:frame.height * 3, y: frame.height / 2, width: frame.width - (frame.height * 3), height:frame.height))
         friendName.textColor = UIColor.black
+        friendName.font = UIFont(name: mainFont, size: 20)
         contentView.addSubview(friendName)
     }
-
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

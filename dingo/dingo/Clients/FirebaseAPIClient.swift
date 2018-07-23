@@ -32,4 +32,16 @@ class FirebaseAPIClient {
         firebaseUser.child("photo").setValue(pictureData["url"] as! String)
     }
     
+    func getFriendPhotoURL(friendID: String, completion: @escaping (_ photoURL: String) -> Void) {
+        print("friendID: ", friendID)
+        self.dbRef.child("Users").child(friendID).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let photoURL = value?["photo"] as! String
+            completion(photoURL)
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
 }

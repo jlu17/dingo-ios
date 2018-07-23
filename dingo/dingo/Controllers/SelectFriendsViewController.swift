@@ -18,10 +18,10 @@ class SelectFriendsViewController: UIViewController, UITableViewDelegate, UITabl
     var head: UILabel!
     var tableView: UITableView!
     var nextButton = UIButton()
+    var firebaseClient = FirebaseAPIClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("name: ", currentUser.name)
         //displaying stuff on the screen
         view.backgroundColor = FlatBlue()
@@ -71,10 +71,7 @@ class SelectFriendsViewController: UIViewController, UITableViewDelegate, UITabl
                                 style: UITableViewStyle.plain)
         tableView.register(SelectFriendsTableViewCell.self, forCellReuseIdentifier: "selectFriendCell")
         tableView.clipsToBounds = true
-        
         tableView.rowHeight = 100
-
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = true
@@ -97,8 +94,28 @@ class SelectFriendsViewController: UIViewController, UITableViewDelegate, UITabl
         }
         
         cell.awakeFromNib()
-        cell.friendName.text = Array(currentUser.friends)[indexPath.row].value
         
+        print("Array(currentUser.friends)[indexPath.row]: ", Array(currentUser.friends)[indexPath.row])
+        
+        firebaseClient.getFriendPhotoURL(friendID: Array(currentUser.friends)[indexPath.row].key) {
+            (photoURL: String) in
+            print("photoURL: ", photoURL)
+            
+            if let imageURL = URL(string: photoURL) {
+                let imageData:Data = try! Data(contentsOf: imageURL)
+                let size = cell.frame.size.height / 1.5
+                let imageView = UIImageView(frame: CGRect(x: size / 3, y: size / 6, width: size, height: size))
+                imageView.layer.masksToBounds = false
+                imageView.layer.cornerRadius = imageView.frame.height/2
+                imageView.clipsToBounds = true
+                
+                imageView.image = UIImage(data: imageData)
+                
+                cell.addSubview(imageView)
+            }
+        }
+        
+        cell.friendName.text = Array(currentUser.friends)[indexPath.row].value
         return cell
     }
     
