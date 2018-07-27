@@ -17,7 +17,7 @@ class AboutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = FlatBlue()
+        view.backgroundColor = mainColor
         drawDescription()
         drawHomeButton()
     }

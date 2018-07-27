@@ -30,7 +30,7 @@ class HomepageViewController: UIViewController {
         screenWidth = screenSize.width
         screenHeight = screenSize.height
         
-        view.backgroundColor = FlatBlue()
+        view.backgroundColor = mainColor
         drawContainers()
         drawLabels()
         
@@ -62,7 +62,7 @@ class HomepageViewController: UIViewController {
         settingsButton.frame.size = CGSize(width: 45, height:  45)
         settingsButton.center.x = self.view.bounds.width - 50
         settingsButton.center.y = 60
-        settingsButton.backgroundColor = FlatBlue()
+        settingsButton.backgroundColor = mainColor
         settingsButton.tag = 1
         settingsButton.setTitle(NSString(string: "\u{2699}\u{0000FE0E}") as String, for: [])
         settingsButton.setTitleColor(FlatWhite(), for: [])

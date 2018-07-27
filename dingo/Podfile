@@ -10,7 +10,6 @@ target 'dingo' do
   pod 'FirebaseAuth'
   pod 'FirebaseStorage'
   pod 'Firebase/Database'
-  pod 'LocationPicker'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/viccalexander/Chameleon.git', :branch => 'wip/swift4'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Gifu'

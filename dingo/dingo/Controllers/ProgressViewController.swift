@@ -18,7 +18,7 @@ class ProgressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = FlatBlue()
+        view.backgroundColor = mainColor
         drawContainers()
         drawLabels()
         drawCancelButton()
@@ -56,7 +56,7 @@ class ProgressViewController: UIViewController {
         cancelButton.backgroundColor = FlatWhite()
         cancelButton.tag = 1
         cancelButton.setTitle("Cancel, I'm safe.", for: [])
-        cancelButton.setTitleColor(FlatBlue(), for: [])
+        cancelButton.setTitleColor(mainColor, for: [])
         cancelButton.addTarget(self, action: #selector(cancelJourney(_:)), for: .touchUpInside)
         
         self.view.addSubview(cancelButton)

@@ -12,7 +12,6 @@ import FirebaseDatabase
 
 class User {
 //    var photo: String //must be stored as a string for the filename.
-    var friends: [String: String] = [:]
     var name = ""
     var firebaseID: String
     var facebookID: String
@@ -31,13 +30,8 @@ class User {
             let value = snapshot.value as? NSDictionary
             self.name = value?["name"] as! String
             print("self.name: ", self.name)
-            self.friends = value?["friends"] as! [String: String]
         }) { (error) in
             print("Error reading user: ", error.localizedDescription)
         }
-    }
-    
-    func numberOfFriends() -> Int {
-        return friends.count
     }
 }

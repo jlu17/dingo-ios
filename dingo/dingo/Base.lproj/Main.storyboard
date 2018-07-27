@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iPG-Za-nif">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QrD-7Y-Ymh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="2380" y="-636"/>
         </scene>
-        <!--Change Location View Controller-->
+        <!--Change Loc View Controller-->
         <scene sceneID="0pK-aA-kKz">
             <objects>
-                <viewController id="9GR-Ip-XPx" customClass="ChangeLocationViewController" customModule="dingo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9GR-Ip-XPx" customClass="ChangeLocViewController" customModule="dingo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmG-Gh-gpy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jd2-Mn-OcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="802.848575712144"/>
+            <point key="canvasLocation" x="695" y="803"/>
         </scene>
         <!--Select Location-->
         <scene sceneID="Itm-xn-11h">

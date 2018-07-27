@@ -7,5 +7,8 @@
 //
 
 import Foundation
+import ChameleonFramework
 
 let mainFont = "Avenir-Medium"
+let firebasePack = "pack"
+let mainColor = FlatBlue()

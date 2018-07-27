@@ -19,7 +19,7 @@ class ChangeFriendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(userData)
-        view.backgroundColor = FlatBlue()
+        view.backgroundColor = mainColor
         drawContainers()
         drawHelloLabel()
         self.view.addSubview(helloContainer)
@@ -31,7 +31,7 @@ class ChangeFriendViewController: UIViewController {
         nextButton.center.x = self.view.center.x
         nextButton.center.y = self.view.center.y * 1.5
         nextButton.setTitle("Done", for: [])
-        nextButton.setTitleColor(FlatBlue(), for: .normal)
+        nextButton.setTitleColor(mainColor, for: .normal)
         nextButton.addTarget(self, action: #selector(pressNext(_:)), for: .touchUpInside)
         
         self.view.addSubview(nextButton)

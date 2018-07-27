@@ -15,11 +15,7 @@ class FirebaseAPIClient {
         dbRef = Database.database().reference()
     }
     
-    func setDatabaseFriend(id: String, friendID: String, friendName: String) {
-        self.dbRef.child("Users").child(id).child("friends").child(friendID).setValue(friendName)
-    }
-    
-    func updateDatabaseUser(info: [String: AnyObject]) {
+    func handleDatabaseUser(info: [String: AnyObject]) {
         let id = info["id"] as! String
         let firebaseUser = self.dbRef.child("Users").child(id)
         
@@ -33,15 +29,29 @@ class FirebaseAPIClient {
     }
     
     func getFriendPhotoURL(friendID: String, completion: @escaping (_ photoURL: String) -> Void) {
-        print("friendID: ", friendID)
         self.dbRef.child("Users").child(friendID).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
+            print("friendID: ", friendID)
             let value = snapshot.value as? NSDictionary
-            let photoURL = value?["photo"] as! String
+            let photoURL = value!["photo"] as! String
             completion(photoURL)
         }) { (error) in
             print(error.localizedDescription)
         }
     }
     
+    func handleFirebaseSelectedIDs(id: String, friendIDList: [String]) {
+        let pack = self.dbRef.child("Users").child(id).child(firebasePack)
+        pack.removeValue()
+        
+        for friendID in friendIDList {
+            pack.child(friendID).setValue(true)
+        }
+    }
+    
+    func handleFirebaseLocation(id: String, long: Double, lat: Double) {
+        let userLoc = self.dbRef.child("Users").child(id).child("location")
+        userLoc.child("longitude").setValue(long)
+        userLoc.child("latitude").setValue(lat)
+    }
 }

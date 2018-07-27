@@ -44,7 +44,7 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
     
     func drawIntroLabel() {
         introLabel.text = "To use Dingo, please log in."
-        introLabel.textColor = FlatBlue()
+        introLabel.textColor = mainColor
         introLabel.textAlignment = .center
         introLabel.frame = container1.frame
         container1.addSubview(introLabel)
@@ -71,7 +71,6 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print("logging in...")
-        //error
         if error != nil {
             print(error)
             return

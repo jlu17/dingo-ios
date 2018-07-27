@@ -11,6 +11,8 @@
 		100233C820816ECF00C3E08D /* FirebaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100233C720816ECF00C3E08D /* FirebaseAPIClient.swift */; };
 		100233CA20816F1800C3E08D /* FacebookAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100233C920816F1800C3E08D /* FacebookAPIClient.swift */; };
 		100233CC2081752900C3E08D /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100233CB2081752900C3E08D /* ProgressViewController.swift */; };
+		100EEB1E210A9F76002246A4 /* ChangeLocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100EEB1D210A9F76002246A4 /* ChangeLocViewController.swift */; };
+		100EEB20210AA27D002246A4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100EEB1F210AA27D002246A4 /* OnboardingViewController.swift */; };
 		101E5B5F207B08E4007783C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */; };
 		101E5B61207B38A5007783C2 /* SelectFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */; };
 		101E5B63207B3BC1007783C2 /* SelectMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E5B62207B3BC1007783C2 /* SelectMapViewController.swift */; };
@@ -25,7 +27,6 @@
 		1088897C20F16047001F961C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088897B20F16047001F961C /* Constants.swift */; };
 		1088897E20F1618E001F961C /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1088897D20F1618E001F961C /* Journey.swift */; };
 		108CFF89209C1FFE003A6BB5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF88209C1FFE003A6BB5 /* SettingsViewController.swift */; };
-		108CFF8B209C200D003A6BB5 /* ChangeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF8A209C200D003A6BB5 /* ChangeLocationViewController.swift */; };
 		108CFF8D209C201C003A6BB5 /* ChangeFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF8C209C201C003A6BB5 /* ChangeFriendViewController.swift */; };
 		108CFF8F209C202A003A6BB5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF8E209C202A003A6BB5 /* AboutViewController.swift */; };
 		10AA3D4C20FC04C90076969A /* SwiftyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */; };
@@ -57,6 +58,8 @@
 		100233C720816ECF00C3E08D /* FirebaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPIClient.swift; sourceTree = "<group>"; };
 		100233C920816F1800C3E08D /* FacebookAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAPIClient.swift; sourceTree = "<group>"; };
 		100233CB2081752900C3E08D /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		100EEB1D210A9F76002246A4 /* ChangeLocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocViewController.swift; sourceTree = "<group>"; };
+		100EEB1F210AA27D002246A4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		101E5B5D207AE738007783C2 /* dingo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dingo.entitlements; sourceTree = "<group>"; };
 		101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendsViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +81,6 @@
 		1088897B20F16047001F961C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1088897D20F1618E001F961C /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
 		108CFF88209C1FFE003A6BB5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		108CFF8A209C200D003A6BB5 /* ChangeLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewController.swift; sourceTree = "<group>"; };
 		108CFF8C209C201C003A6BB5 /* ChangeFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFriendViewController.swift; sourceTree = "<group>"; };
 		108CFF8E209C202A003A6BB5 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyAPIClient.swift; sourceTree = "<group>"; };
@@ -143,11 +145,9 @@
 		100233C420816E3200C3E08D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */,
-				101E5B62207B3BC1007783C2 /* SelectMapViewController.swift */,
-				1084436A2075BF93007EBF69 /* FBLoginPage.swift */,
-				108CFF8A209C200D003A6BB5 /* ChangeLocationViewController.swift */,
+				100EEB21210AA29A002246A4 /* Onboarding */,
 				108CFF8C209C201C003A6BB5 /* ChangeFriendViewController.swift */,
+				100EEB1D210A9F76002246A4 /* ChangeLocViewController.swift */,
 				108CFF8E209C202A003A6BB5 /* AboutViewController.swift */,
 				108CFF88209C1FFE003A6BB5 /* SettingsViewController.swift */,
 				100233CB2081752900C3E08D /* ProgressViewController.swift */,
@@ -164,6 +164,17 @@
 				10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		100EEB21210AA29A002246A4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1084436A2075BF93007EBF69 /* FBLoginPage.swift */,
+				101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */,
+				101E5B62207B3BC1007783C2 /* SelectMapViewController.swift */,
+				100EEB1F210AA27D002246A4 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		105F22A62060AA6A00ABF98E = {
@@ -441,7 +452,6 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/LocationPicker/LocationPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -459,7 +469,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gifu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LocationPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -501,11 +510,12 @@
 				100233CC2081752900C3E08D /* ProgressViewController.swift in Sources */,
 				101E5B61207B38A5007783C2 /* SelectFriendsViewController.swift in Sources */,
 				103474F1209A3D78006CD645 /* User.swift in Sources */,
+				100EEB20210AA27D002246A4 /* OnboardingViewController.swift in Sources */,
 				100233CA20816F1800C3E08D /* FacebookAPIClient.swift in Sources */,
 				108CFF8D209C201C003A6BB5 /* ChangeFriendViewController.swift in Sources */,
+				100EEB1E210A9F76002246A4 /* ChangeLocViewController.swift in Sources */,
 				1088897E20F1618E001F961C /* Journey.swift in Sources */,
 				100233C820816ECF00C3E08D /* FirebaseAPIClient.swift in Sources */,
-				108CFF8B209C200D003A6BB5 /* ChangeLocationViewController.swift in Sources */,
 				1088897C20F16047001F961C /* Constants.swift in Sources */,
 				108CFF8F209C202A003A6BB5 /* AboutViewController.swift in Sources */,
 				10AA3D4E20FC6CA70076969A /* SelectFriendsTableViewCell.swift in Sources */,

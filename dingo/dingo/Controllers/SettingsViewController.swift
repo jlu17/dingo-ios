@@ -30,12 +30,12 @@ class SettingsViewController: UIViewController, FBSDKLoginButtonDelegate {
         locButton.backgroundColor = .clear
         //locButton.layer.cornerRadius = 5
         locButton.layer.borderWidth = 1
-        locButton.layer.borderColor = FlatBlue().cgColor
+        locButton.layer.borderColor = mainColor.cgColor
         locButton.frame.size = CGSize(width: self.view.bounds.width / 1.5, height: self.view.bounds.width / 8)
         locButton.center.x = self.view.center.x
         locButton.center.y = self.view.bounds.height / 2 - 50
         locButton.setTitle("Change Default Location", for: [])
-        locButton.setTitleColor(FlatBlue(), for: .normal)
+        locButton.setTitleColor(mainColor, for: .normal)
         locButton.addTarget(self, action: #selector(changeLocAction(_:)), for: .touchUpInside)
         
         self.view.addSubview(locButton)
@@ -46,12 +46,12 @@ class SettingsViewController: UIViewController, FBSDKLoginButtonDelegate {
         friendsButton.backgroundColor = .clear
         //locButton.layer.cornerRadius = 5
         friendsButton.layer.borderWidth = 1
-        friendsButton.layer.borderColor = FlatBlue().cgColor
+        friendsButton.layer.borderColor = mainColor.cgColor
         friendsButton.frame.size = CGSize(width: self.view.bounds.width / 1.5, height: self.view.bounds.width / 8)
         friendsButton.center.x = self.view.center.x
         friendsButton.center.y = self.view.bounds.height / 2
         friendsButton.setTitle("Change Default Friends", for: [])
-        friendsButton.setTitleColor(FlatBlue(), for: .normal)
+        friendsButton.setTitleColor(mainColor, for: .normal)
         friendsButton.addTarget(self, action: #selector(changeFriendAction(_:)), for: .touchUpInside)
         
         self.view.addSubview(friendsButton)
@@ -62,12 +62,12 @@ class SettingsViewController: UIViewController, FBSDKLoginButtonDelegate {
         aboutButton.backgroundColor = .clear
         //locButton.layer.cornerRadius = 5
         aboutButton.layer.borderWidth = 1
-        aboutButton.layer.borderColor = FlatBlue().cgColor
+        aboutButton.layer.borderColor = mainColor.cgColor
         aboutButton.frame.size = CGSize(width: self.view.bounds.width / 1.5, height: self.view.bounds.width / 8)
         aboutButton.center.x = self.view.center.x
         aboutButton.center.y = self.view.bounds.height / 2 + 50
         aboutButton.setTitle("About", for: [])
-        aboutButton.setTitleColor(FlatBlue(), for: .normal)
+        aboutButton.setTitleColor(mainColor, for: .normal)
         aboutButton.addTarget(self, action: #selector(aboutAction(_:)), for: .touchUpInside)
         
         self.view.addSubview(aboutButton)
