@@ -55,6 +55,7 @@ class SelectFriendsViewController: UIViewController, UITableViewDelegate, UITabl
     func drawNextButton() {
         nextButton.isHidden = false
         nextButton.backgroundColor = FlatWhite()
+        nextButton.titleLabel?.font = UIFont(name: mainFont, size: 18)
         nextButton.tag = 1
         nextButton.frame.size = CGSize(width: self.view.bounds.width / 2, height: self.view.bounds.width / 8)
         nextButton.center.x = self.view.center.x
@@ -160,20 +161,26 @@ class SelectFriendsViewController: UIViewController, UITableViewDelegate, UITabl
         print("Button clicked!")
         performSegue(withIdentifier: "friendsToMap", sender: nil)
     }
-
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func saveSelectedFriends() {
         let selectedIndexes = tableView.indexPathsForSelectedRows
         print(selectedIndexes!)
-
+        
         var selectedIDs: [String] = []
         for index in selectedIndexes! {
             selectedIDs.append(Array(friendsDict)[index.row].key as! String)
         }
         
-        print(selectedIDs)
-        
         firebaseClient.handleFirebaseSelectedIDs(id: currentUser.facebookID, friendIDList: selectedIDs)
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        saveSelectedFriends()
+        
+        if let destinationViewController = segue.destination as? SelectMapViewController {
+            destinationViewController.currentUser = currentUser
+        }
     }
     
 

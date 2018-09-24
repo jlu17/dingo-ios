@@ -103,7 +103,6 @@ class SettingsViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("logging out")
         self.performSegue(withIdentifier: "unwindSegueToLogIn", sender: self)
-
     }
 
     override func didReceiveMemoryWarning() {

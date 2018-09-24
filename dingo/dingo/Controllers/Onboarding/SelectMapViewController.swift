@@ -11,9 +11,11 @@ import ChameleonFramework
 import MapKit
 import CoreLocation
 
-class SelectMapViewController: UIViewController, MKMapViewDelegate {
+class SelectMapViewController: UIViewController, CLLocationManagerDelegate {
     
     var selectedLoc: CLLocationCoordinate2D!
+    var locationManager: CLLocationManager!
+    var currentUser: User!
     var name: String!
     var lat: Double!
     var long: Double!
@@ -24,12 +26,22 @@ class SelectMapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager = CLLocationManager()
+        locationManager.requestAlwaysAuthorization()
+        
+//        if CLLocationManager.locationServicesEnabled() {
+//            locationManager.delegate = self
+//            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+//            locationManager.startUpdatingLocation()
+//            selectedLoc = CLLocationManager.location?.coordinate
+//            drawMapView()
+//            drawLocation()
+//        }
+        
         view.backgroundColor = mainColor
         self.name = "No location selected"
         selectedLoc = CLLocationCoordinate2D(latitude: 37.8676, longitude: -122.2587)
-        
-        drawMapView()
-        drawLocation()
         drawEndButton()
     }
 
@@ -37,35 +49,49 @@ class SelectMapViewController: UIViewController, MKMapViewDelegate {
         super.didReceiveMemoryWarning()
     }
     
+//    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+//        if status == .authorizedAlways {
+//            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+//                if CLLocationManager.isRangingAvailable() {
+//
+//                }
+//            }
+//        }
+//    }
+    
     func drawMapView() {
         mapView = MKMapView()
-        
+
         let leftMargin:CGFloat = 10
         let topMargin:CGFloat = 60
         let mapWidth:CGFloat = view.frame.size.width-20
         let mapHeight:CGFloat = 300
-        
+
         mapView.frame = CGRect(x: leftMargin, y: topMargin, width: mapWidth, height: mapHeight)
-        
+
         mapView.mapType = MKMapType.standard
         mapView.isZoomEnabled = true
         mapView.isScrollEnabled = true
-        
+
         // Or, if needed, we can position map in the center of the view
         mapView.center = view.center
-        
+
         // Setting default location
         let defaultCenter = CLLocationCoordinate2D(latitude: 37.8676, longitude: -122.2587)
         let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         mapView.region = MKCoordinateRegion(center: defaultCenter, span: defaultSpan)
-        
+
         // drop pin stuff
         let uilgr = UILongPressGestureRecognizer(target: self, action: #selector(dropPin(_:)))
         uilgr.minimumPressDuration = 1.0
         mapView.addGestureRecognizer(uilgr)
         view.addSubview(mapView)
     }
-    
+
+//    func mapView(MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped: UIControl) {
+//
+//    }
+
     @objc func dropPin(_ gestureRecognizer:UIGestureRecognizer){
         mapView.removeAnnotations(mapView.annotations)
         let touchPoint = gestureRecognizer.location(in: mapView)
@@ -73,7 +99,7 @@ class SelectMapViewController: UIViewController, MKMapViewDelegate {
         let annotation = MKPointAnnotation()
         annotation.coordinate = self.selectedLoc
         mapView.addAnnotation(annotation)
-        
+
         nextButton.isHidden = false
     }
     
@@ -97,7 +123,7 @@ class SelectMapViewController: UIViewController, MKMapViewDelegate {
         nextButton.center.x = self.view.center.x
         nextButton.center.y = self.view.center.y * 1.5
         nextButton.tag = 0
-        nextButton.setTitle("Finish setup", for: [])
+        nextButton.setTitle("Next", for: [])
         nextButton.setTitleColor(mainColor, for: .normal)
         nextButton.addTarget(self, action: #selector(endSetup(_:)), for: .touchUpInside)
         
@@ -108,11 +134,17 @@ class SelectMapViewController: UIViewController, MKMapViewDelegate {
     
     @objc func endSetup(_ button: UIButton) {
         print("Button with tag: \(button.tag) clicked!")
-        performSegue(withIdentifier: "mapToHome", sender: nil)
+        
+        //error has something to do with mkmapview i bet
+        self.performSegue(withIdentifier: "mapToOnboarding", sender: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? OnboardingViewController {
+            destinationViewController.currentUser = currentUser
+        }
+                
         //save selected loc in firebase
-        FirebaseAPIClient().handleFirebaseLocation(id: "11", long: selectedLoc.longitude, lat: selectedLoc.latitude)
+        FirebaseAPIClient().handleFirebaseLocation(id: currentUser.facebookID, long: selectedLoc.longitude, lat: selectedLoc.latitude)
     }
 }

@@ -13,6 +13,9 @@ target 'dingo' do
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/viccalexander/Chameleon.git', :branch => 'wip/swift4'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Gifu'
+  pod 'paper-onboarding'
+  pod 'SwiftyOnboard'
+
   # Pods for dingo
 
   target 'dingoTests' do

@@ -12,6 +12,7 @@ import ChameleonFramework
 class HomepageViewController: UIViewController {
     
     @IBAction func unwindToHome(segue:UIStoryboardSegue) { }
+    var currentUser: User!
     var introLabel = UILabel()
     var whoLabel = UILabel()
     var whereLabel = UILabel()
