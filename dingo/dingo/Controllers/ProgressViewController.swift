@@ -8,7 +8,6 @@
 
 import UIKit
 import ChameleonFramework
-import Gifu
 
 class ProgressViewController: UIViewController {
 
@@ -22,7 +21,6 @@ class ProgressViewController: UIViewController {
         drawContainers()
         drawLabels()
         drawCancelButton()
-//        drawGif()
         self.view.addSubview(container1)
     }
     
@@ -30,14 +28,6 @@ class ProgressViewController: UIViewController {
         container1 = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.midY))
         container1.center =  CGPoint(x: container1.frame.midX, y: container1.frame.midY * 1.5)
     }
-    
-//    func drawGif() {
-//        let imageView = GIFImageView(frame: CGRect(x: 0, y: 200, width: 200, height: 100))
-//        imageView.animate(withGIFNamed: "walking_man") {
-//            print("It's animating!")
-//        }
-//        self.view.addSubview(imageView)
-//    }
     
     func drawLabels() {
         progressLabel.text = "Going home..."

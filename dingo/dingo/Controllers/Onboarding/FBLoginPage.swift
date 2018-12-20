@@ -6,13 +6,14 @@
 //  Copyright © 2018 Jennifer Lu. All rights reserved.
 
 import UIKit
-import FBSDKLoginKit
+// import FBSDKLoginKit
 import Firebase
 import ChameleonFramework
 import FirebaseDatabase
+import FacebookLogin
 
-
-class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
+class FBLoginPage: UIViewController, LoginButtonDelegate {
+    
     var dingo: UIImageView!
     var introLabel = UILabel()
     var container1: UIView!
@@ -59,23 +60,22 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func drawLogInButton() {
-        let loginButton = FBSDKLoginButton()
+        
+        let loginButton = LoginButton(readPermissions: [.publicProfile, .userFriends])
+        loginButton.center = view.center
+        
+        view.addSubview(loginButton)
+        
         loginButton.delegate = self
         loginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 100, height: 40)
         loginButton.center.x = self.view.bounds.midX
         loginButton.center.y = view.frame.height - 70
         //To add permissions
-        loginButton.readPermissions = ["user_friends", "public_profile"]
         view.addSubview(loginButton)
     }
     
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        print("logging in...")
-        if error != nil {
-            print(error)
-            return
-        }
-        
+    
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
         FacebookAPIClient().handleFBLogin { (success) -> Void in
             if success {
                 self.newUser = User()
@@ -87,8 +87,7 @@ class FBLoginPage: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-    // WHEN LOGOUT BUTTON IS LOGGED OUT
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
         print("logged out")
         
         // TO IMPLEMENT INTO CUSTOM FB LOGIN HEREEEE

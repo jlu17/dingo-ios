@@ -61,6 +61,7 @@ class SelectMapViewController: UIViewController, CLLocationManagerDelegate {
     
     func drawMapView() {
         mapView = MKMapView()
+        print("mapview initialized")
 
         let leftMargin:CGFloat = 10
         let topMargin:CGFloat = 60
@@ -86,6 +87,7 @@ class SelectMapViewController: UIViewController, CLLocationManagerDelegate {
         uilgr.minimumPressDuration = 1.0
         mapView.addGestureRecognizer(uilgr)
         view.addSubview(mapView)
+        print("added mapview")
     }
 
 //    func mapView(MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped: UIControl) {
