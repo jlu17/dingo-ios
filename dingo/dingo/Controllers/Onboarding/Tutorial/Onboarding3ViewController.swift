@@ -10,8 +10,7 @@ import UIKit
 
 class Onboarding3ViewController: UIViewController {
     var currentUser: User!
-    var descriptionLabel = UILabel()
-    var descriptionContainer: UIView!
+    var descriptionLabel3 = UILabel()
     var img: UIImageView!
     var w: CGFloat!
     var h: CGFloat!
@@ -25,7 +24,6 @@ class Onboarding3ViewController: UIViewController {
         view.backgroundColor = mainColor
         drawImage()
         drawDescription()
-        self.view.addSubview(descriptionContainer)
         drawEndButton()
 
     }
@@ -38,30 +36,20 @@ class Onboarding3ViewController: UIViewController {
     }
     
     func drawDescription() {
-        descriptionContainer = UIView(frame: CGRect(x: w / 8 - 10, y: h / 4, width: w / 2 + 40, height: h / 3))
-        descriptionLabel = onboardingDescription3
-        descriptionLabel.frame = descriptionContainer.frame
-        descriptionLabel.center = descriptionContainer.center
-        descriptionContainer.addSubview(descriptionLabel)
+        descriptionLabel3 = onboardingDescription3
+        descriptionLabel3.frame = CGRect(x: w/8, y: h/2, width: w*3/4, height: h/4)
+        self.view.addSubview(descriptionLabel3)
     }
     
     func drawEndButton() {
-        nextButton = UIButton(frame: CGRect(x: 76, y: 516, width: 225, height: 50))
-        nextButton.backgroundColor = secondaryColor
-        nextButton.frame.size = CGSize(width: self.view.bounds.width / 2, height: self.view.bounds.width / 8)
-        nextButton.center.x = self.view.center.x
-        nextButton.center.y = self.view.center.y * 1.5
-        nextButton.tag = 0
+        nextButton = OnboardingButton(frame: CGRect(x: w/8, y: h - w/2, width: w*3/4, height: w / 8))
         nextButton.setTitle("Let's start!", for: [])
-        nextButton.setTitleColor(mainColor, for: .normal)
         nextButton.addTarget(self, action: #selector(endSetup(_:)), for: .touchUpInside)
-        
         view.addSubview(nextButton)
     }
     
     @objc func endSetup(_ button: UIButton) {
         performSegue(withIdentifier: "onboardingToHome", sender: nil)
-        // NEED TO FIX THIS TODO
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

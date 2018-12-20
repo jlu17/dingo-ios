@@ -11,8 +11,7 @@ import UIKit
 
 class Onboarding1ViewController: UIViewController {
     
-    var descriptionLabel = UILabel()
-    var descriptionContainer: UIView!
+    var descriptionLabel1 = UILabel()
     var img: UIImageView!
     var w: CGFloat!
     var h: CGFloat!
@@ -21,12 +20,10 @@ class Onboarding1ViewController: UIViewController {
         super.viewDidLoad()
         w = self.view.bounds.width
         h = self.view.bounds.height
+        super.viewDidLoad()
         view.backgroundColor = mainColor
         drawImage()
-        drawDescription()
-        self.view.addSubview(descriptionContainer)
-
-        
+        drawDescription() 
     }
     
     func drawImage() {
@@ -37,11 +34,9 @@ class Onboarding1ViewController: UIViewController {
     }
     
     func drawDescription() {
-        descriptionContainer = UIView(frame: CGRect(x: w / 8 - 10, y: h / 4, width: w / 2 + 40, height: h / 3))
-        descriptionLabel = onboardingDescription1
-        descriptionLabel.frame = descriptionContainer.frame
-        descriptionLabel.center = descriptionContainer.center
-        descriptionContainer.addSubview(descriptionLabel)
+        descriptionLabel1 = onboardingDescription1
+        descriptionLabel1.frame = CGRect(x: w/8, y: h/2, width: w*3/4, height: h/4)
+        self.view.addSubview(descriptionLabel1)
     }
 }
 

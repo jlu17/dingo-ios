@@ -32,7 +32,7 @@ class ProgressViewController: UIViewController {
     func drawLabels() {
         progressLabel.text = "Going home..."
         progressLabel.textColor = FlatWhite()
-        progressLabel.font = progressLabel.font.withSize(20)
+        progressLabel.font = subTitleFont
         progressLabel.textAlignment = .center
         progressLabel.frame = container1.frame
         container1.addSubview(progressLabel)
@@ -56,8 +56,8 @@ class ProgressViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @objc @IBAction func cancelJourney(_ sender: Any) {
-        
+    @objc @IBAction func cancelJourney(_ sender: Any?) {
+        print("Cancel Journey button clicked!")
         performSegue(withIdentifier: "unwindToHome", sender: self)
     }
 

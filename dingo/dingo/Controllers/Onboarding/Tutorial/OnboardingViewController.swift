@@ -18,7 +18,8 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dots.frame = CGRect(x: self.view.bounds.width / 2 - 10, y: self.view.bounds.height / 2 + 10, width: 20, height: 20)
+        // Customize dots here!!
+        dots.frame = CGRect(x: self.view.bounds.width / 2 - 10, y: self.view.bounds.height / 2 + 30, width: 20, height: 20)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
