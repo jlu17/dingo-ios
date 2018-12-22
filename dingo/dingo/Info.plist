@@ -55,15 +55,18 @@
 	<string>162224591155865</string>
 	<key>FacebookDisplayName</key>
 	<string>Dingo</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Description</string>
-    
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Description</string>
-    
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Description</string>
-
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Description</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Description</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Description</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>OpenSans-Bold.ttf</string>
+		<string>OpenSans-Regular.ttf</string>
+		<string>OpenSans-SemiBold.ttf</string>
+	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

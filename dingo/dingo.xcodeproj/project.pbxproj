@@ -19,10 +19,14 @@
 		1019A87421CB6A30004381B3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019A87321CB6A30004381B3 /* OnboardingViewController.swift */; };
 		1019A87621CC1A22004381B3 /* OnboardingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019A87521CC1A22004381B3 /* OnboardingHelper.swift */; };
 		1019A87A21CC5A37004381B3 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019A87921CC5A36004381B3 /* ModalViewController.swift */; };
+		1019A87D21CD65FE004381B3 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019A87C21CD65FE004381B3 /* LogOutViewController.swift */; };
 		101E5B5F207B08E4007783C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */; };
 		101E5B61207B38A5007783C2 /* SelectFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */; };
 		101E5B63207B3BC1007783C2 /* SelectMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E5B62207B3BC1007783C2 /* SelectMapViewController.swift */; };
 		103474F1209A3D78006CD645 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103474F0209A3D78006CD645 /* User.swift */; };
+		10350E6B21CD909000838384 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10350E6821CD908F00838384 /* OpenSans-Bold.ttf */; };
+		10350E6C21CD909000838384 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10350E6921CD908F00838384 /* OpenSans-SemiBold.ttf */; };
+		10350E6D21CD909000838384 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10350E6A21CD909000838384 /* OpenSans-Regular.ttf */; };
 		105F22B32060AA6A00ABF98E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22B22060AA6A00ABF98E /* AppDelegate.swift */; };
 		105F22B82060AA6A00ABF98E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105F22B62060AA6A00ABF98E /* Main.storyboard */; };
 		105F22BA2060AA6A00ABF98E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105F22B92060AA6A00ABF98E /* Assets.xcassets */; };
@@ -72,11 +76,15 @@
 		1019A87321CB6A30004381B3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		1019A87521CC1A22004381B3 /* OnboardingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHelper.swift; sourceTree = "<group>"; };
 		1019A87921CC5A36004381B3 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		1019A87C21CD65FE004381B3 /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		101E5B5D207AE738007783C2 /* dingo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dingo.entitlements; sourceTree = "<group>"; };
 		101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendsViewController.swift; sourceTree = "<group>"; };
 		101E5B62207B3BC1007783C2 /* SelectMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMapViewController.swift; sourceTree = "<group>"; };
 		103474F0209A3D78006CD645 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		10350E6821CD908F00838384 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		10350E6921CD908F00838384 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		10350E6A21CD909000838384 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		105F22AF2060AA6A00ABF98E /* dingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105F22B22060AA6A00ABF98E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		105F22B72060AA6A00ABF98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,11 +167,10 @@
 			isa = PBXGroup;
 			children = (
 				100EEB21210AA29A002246A4 /* Onboarding */,
+				1019A87B21CD655A004381B3 /* Settings */,
 				108CFF8C209C201C003A6BB5 /* ChangeFriendViewController.swift */,
 				100EEB1D210A9F76002246A4 /* ChangeLocViewController.swift */,
-				108CFF8E209C202A003A6BB5 /* AboutViewController.swift */,
 				108CFF88209C1FFE003A6BB5 /* SettingsViewController.swift */,
-				1019A87921CC5A36004381B3 /* ModalViewController.swift */,
 				100233CB2081752900C3E08D /* ProgressViewController.swift */,
 				100233C02081593000C3E08D /* HomepageViewController.swift */,
 			);
@@ -203,6 +210,26 @@
 			path = Tutorial;
 			sourceTree = "<group>";
 		};
+		1019A87B21CD655A004381B3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1019A87921CC5A36004381B3 /* ModalViewController.swift */,
+				108CFF8E209C202A003A6BB5 /* AboutViewController.swift */,
+				1019A87C21CD65FE004381B3 /* LogOutViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		10350E6721CD8FED00838384 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				10350E6821CD908F00838384 /* OpenSans-Bold.ttf */,
+				10350E6A21CD909000838384 /* OpenSans-Regular.ttf */,
+				10350E6921CD908F00838384 /* OpenSans-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		105F22A62060AA6A00ABF98E = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +266,7 @@
 				100233C320816E2D00C3E08D /* Cells */,
 				100233C420816E3200C3E08D /* Controllers */,
 				101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */,
+				10350E6721CD8FED00838384 /* Fonts */,
 			);
 			path = dingo;
 			sourceTree = "<group>";
@@ -403,6 +431,9 @@
 				105F22BD2060AA6A00ABF98E /* LaunchScreen.storyboard in Resources */,
 				101E5B5F207B08E4007783C2 /* GoogleService-Info.plist in Resources */,
 				105F22BA2060AA6A00ABF98E /* Assets.xcassets in Resources */,
+				10350E6D21CD909000838384 /* OpenSans-Regular.ttf in Resources */,
+				10350E6B21CD909000838384 /* OpenSans-Bold.ttf in Resources */,
+				10350E6C21CD909000838384 /* OpenSans-SemiBold.ttf in Resources */,
 				105F22B82060AA6A00ABF98E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +583,7 @@
 				108CFF8F209C202A003A6BB5 /* AboutViewController.swift in Sources */,
 				10AA3D4E20FC6CA70076969A /* SelectFriendsTableViewCell.swift in Sources */,
 				105F22B32060AA6A00ABF98E /* AppDelegate.swift in Sources */,
+				1019A87D21CD65FE004381B3 /* LogOutViewController.swift in Sources */,
 				10AA3D4C20FC04C90076969A /* SwiftyAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

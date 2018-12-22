@@ -9,7 +9,7 @@
 import UIKit
 import ChameleonFramework
 
-class HomepageViewController: UIViewController, ModalViewControllerDelegate {
+class HomepageViewController: UIViewController {
     
     @IBAction func unwindToHome(segue:UIStoryboardSegue) { }
     var currentUser: User!
@@ -37,8 +37,8 @@ class HomepageViewController: UIViewController, ModalViewControllerDelegate {
     
     func drawStartButton() {
         dingoCircleView = UIImageView(image: UIImage(named: "dingoCircle"))
-        dingoCircleView.frame.size = CGSize(width: dingoCircleView.image!.size.width / 4, height: dingoCircleView.image!.size.width / 4)
-        dingoCircleView.center = self.view.center
+        let imageSize = w*2/3
+        dingoCircleView.frame = CGRect(x: (w-imageSize)/2, y: (h-imageSize)/2, width: imageSize, height: imageSize)
         dingoCircleView.isOpaque = false
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(startJourney(_:)))
@@ -71,7 +71,7 @@ class HomepageViewController: UIViewController, ModalViewControllerDelegate {
         let friendsButton = drawDefaultButtons(title: "Nidhi, Kelvin")
         friendsButton.addTarget(self, action: #selector(defaultFriends(_:)), for: .touchUpInside)
         
-        let dingoBottom = dingoCircleView.frame.origin.y + dingoCircleView.frame.height + h/16
+        let dingoBottom = dingoCircleView.frame.origin.y + dingoCircleView.frame.height + h/20
         
         let defaultButtonHeight = h/16
         let defaultButtonWidth = w/2
@@ -151,13 +151,9 @@ class HomepageViewController: UIViewController, ModalViewControllerDelegate {
     
     @objc func settings(_ Sender: Any?) {
         print("Settings clicked!")
-        // performSegue(withIdentifier: "toSettings", sender: nil)
-        
-        self.definesPresentationContext = true
-        self.providesPresentationContextTransitionStyle = true
-        
-        self.overlayBlurredBackgroundView()
-        self.present(ModalViewController(), animated: true)
+        let modalViewController = ModalViewController()
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        self.present(modalViewController, animated: true)
     }
     
     @objc func defaultLocation(_ Sender: Any?) {
@@ -171,44 +167,4 @@ class HomepageViewController: UIViewController, ModalViewControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func overlayBlurredBackgroundView() {
-        let blurredBackgroundView = UIVisualEffectView()
-        
-        blurredBackgroundView.frame = view.frame
-        blurredBackgroundView.effect = UIBlurEffect(style: .dark)
-        
-        view.addSubview(blurredBackgroundView)
-    }
-    
-    func removeBlurredBackgroundView() {
-        
-        for subview in view.subviews {
-            if subview.isKind(of: UIVisualEffectView.self) {
-                subview.removeFromSuperview()
-            }
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier {
-            if identifier == "ShowModalSettings" {
-                if let viewController = segue.destination as? ModalViewController {
-                    viewController.delegate = self
-                    viewController.modalPresentationStyle = .overFullScreen
-                }
-            }
-        }
-    }
-    
-    //not relevant anymore
-    //        let startButton = UIButton(type: UIButtonType.custom) as UIButton
-    //        startButton.frame.size = CGSize(width: self.view.bounds.midX, height: self.view.bounds.midX)
-    //        startButton.center = self.view.center
-    //        startButton.backgroundColor = FlatWhite()
-    //        startButton.tag = 0
-    //        startButton.setImage(dingoCircleView.image, for: [])
-    //        startButton.setTitleColor(FlatBlack(), for: [])
-    //        startButton.addTarget(self, action: #selector(startJourney(_:)), for: .touchUpInside)
-    //self.view.addSubview(startButton)
 }

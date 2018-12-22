@@ -41,7 +41,7 @@ func handleText(t: String) -> UILabel {
     label.textAlignment = .center
     label.lineBreakMode = .byWordWrapping
     label.numberOfLines = 4
-    label.font = UIFont(name: mainFont, size: 20)
+    label.font = regularFont
     return label
 }
 

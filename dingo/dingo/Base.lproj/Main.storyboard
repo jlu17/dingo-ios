@@ -20,10 +20,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7yx-B8-KD8"/>
                     </view>
+                    <connections>
+                        <segue destination="4eD-0M-f4O" kind="presentation" identifier="toLogOut" id="uJJ-7B-Iqk"/>
+                        <segue destination="gtj-nN-Sdf" kind="presentation" modalPresentationStyle="overCurrentContext" id="1gb-dM-gN8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cro-sf-DcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3908" y="-1168"/>
+            <point key="canvasLocation" x="4636" y="-122"/>
         </scene>
         <!--Settings-->
         <scene sceneID="2oH-Rt-Vt6">
@@ -46,7 +50,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8u-4i-tHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="imq-Jz-gCr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4636" y="-383"/>
+            <point key="canvasLocation" x="8271" y="-807"/>
         </scene>
         <!--Change Loc View Controller-->
         <scene sceneID="0pK-aA-kKz">
@@ -65,7 +69,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ux7-NJ-s6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2YS-kX-dWz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5929" y="-1147"/>
+            <point key="canvasLocation" x="8271" y="-1667"/>
         </scene>
         <!--Change_Friend-->
         <scene sceneID="dEK-69-oKL">
@@ -84,7 +88,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h16-yy-sDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GYs-sd-ur8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5929" y="-384"/>
+            <point key="canvasLocation" x="7217" y="-1667"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="ebd-7J-Wht">
@@ -103,7 +107,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrc-MK-faG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ClZ-Xl-vjy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5929" y="389"/>
+            <point key="canvasLocation" x="6025" y="-123"/>
+        </scene>
+        <!--Log Out View Controller-->
+        <scene sceneID="2H9-hX-FCL">
+            <objects>
+                <viewController id="4eD-0M-f4O" customClass="LogOutViewController" customModule="dingo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5gR-4r-6Xu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qkU-Ai-hb4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pxa-kP-2Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6025" y="671"/>
         </scene>
         <!--Homepage-->
         <scene sceneID="tne-QT-ifu">
@@ -117,7 +136,6 @@
                     </view>
                     <connections>
                         <segue destination="4pk-OR-w9w" kind="show" identifier="homepageToProgress" id="0rg-AB-PnQ"/>
-                        <segue destination="1pf-Pf-5tj" kind="show" identifier="toSettings" id="5Gp-hJ-dfs"/>
                         <segue destination="Uig-UA-rZ1" kind="presentation" identifier="ShowModalSettings" modalPresentationStyle="overCurrentContext" id="yka-RW-IYk"/>
                     </connections>
                 </viewController>
@@ -309,4 +327,7 @@
             <point key="canvasLocation" x="1674" y="2201"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1gb-dM-gN8"/>
+    </inferredMetricsTieBreakers>
 </document>
