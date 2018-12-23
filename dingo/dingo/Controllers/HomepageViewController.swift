@@ -147,6 +147,7 @@ class HomepageViewController: UIViewController {
     
     @objc func notifications(_ Sender: Any?) {
         print("Notifications clicked!")
+        performSegue(withIdentifier: "toNotifications", sender: self)
     }
     
     @objc func settings(_ Sender: Any?) {

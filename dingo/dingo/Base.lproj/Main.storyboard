@@ -10,6 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Notifications View Controller-->
+        <scene sceneID="yoe-v7-Vaa">
+            <objects>
+                <viewController id="FCI-vI-mDw" customClass="NotificationsViewController" customModule="dingo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gun-ji-KW5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7Y2-gy-JtP"/>
+                    </view>
+                    <connections>
+                        <segue destination="7K5-9c-MzV" kind="unwind" identifier="unwindNotifications" unwindAction="unwindToHomeWithSegue:" id="1MC-9U-Qgk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UEa-dD-MEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7K5-9c-MzV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4646" y="-865"/>
+        </scene>
         <!--Modal View Controller-->
         <scene sceneID="h09-85-w3F">
             <objects>
@@ -137,6 +156,7 @@
                     <connections>
                         <segue destination="4pk-OR-w9w" kind="show" identifier="homepageToProgress" id="0rg-AB-PnQ"/>
                         <segue destination="Uig-UA-rZ1" kind="presentation" identifier="ShowModalSettings" modalPresentationStyle="overCurrentContext" id="yka-RW-IYk"/>
+                        <segue destination="FCI-vI-mDw" kind="show" identifier="toNotifications" id="sbK-p9-oXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

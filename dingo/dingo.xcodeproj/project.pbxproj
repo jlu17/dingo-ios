@@ -41,6 +41,7 @@
 		108CFF8F209C202A003A6BB5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CFF8E209C202A003A6BB5 /* AboutViewController.swift */; };
 		10AA3D4C20FC04C90076969A /* SwiftyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */; };
 		10AA3D4E20FC6CA70076969A /* SelectFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA3D4D20FC6CA70076969A /* SelectFriendsTableViewCell.swift */; };
+		10DB1C4621CF709A0074CCD0 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB1C4521CF709A0074CCD0 /* NotificationsViewController.swift */; };
 		42094D95B9F016D9E2E10435 /* Pods_dingoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4B718A89A09C605B48CE7D /* Pods_dingoUITests.framework */; };
 		441D9C9C2E1B9614DE5DE2F1 /* Pods_dingoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52690642EBCD4C064F0FEE8B /* Pods_dingoTests.framework */; };
 		F634DEA7E44B69E22DE49A66 /* Pods_dingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD81928D4C7D252336A5C37B /* Pods_dingo.framework */; };
@@ -105,6 +106,7 @@
 		108CFF8E209C202A003A6BB5 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		10AA3D4B20FC04C90076969A /* SwiftyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyAPIClient.swift; sourceTree = "<group>"; };
 		10AA3D4D20FC6CA70076969A /* SelectFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendsTableViewCell.swift; sourceTree = "<group>"; };
+		10DB1C4521CF709A0074CCD0 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsViewController.swift; path = dingo/Controllers/NotificationsViewController.swift; sourceTree = SOURCE_ROOT; };
 		18CFC1EDFE90A2B77D3552CC /* Pods-dingoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingoTests/Pods-dingoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B4B718A89A09C605B48CE7D /* Pods_dingoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dingoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DFA942B4130399CBB3C116 /* Pods-dingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingo.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingo/Pods-dingo.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				108CFF88209C1FFE003A6BB5 /* SettingsViewController.swift */,
 				100233CB2081752900C3E08D /* ProgressViewController.swift */,
 				100233C02081593000C3E08D /* HomepageViewController.swift */,
+				10DB1C4521CF709A0074CCD0 /* NotificationsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				101E5B63207B3BC1007783C2 /* SelectMapViewController.swift in Sources */,
 				1019A86A21CB3E36004381B3 /* OnboardingPageViewController.swift in Sources */,
 				1084436B2075BF93007EBF69 /* FBLoginPage.swift in Sources */,
+				10DB1C4621CF709A0074CCD0 /* NotificationsViewController.swift in Sources */,
 				100233C12081593000C3E08D /* HomepageViewController.swift in Sources */,
 				1019A87421CB6A30004381B3 /* OnboardingViewController.swift in Sources */,
 				108CFF89209C1FFE003A6BB5 /* SettingsViewController.swift in Sources */,

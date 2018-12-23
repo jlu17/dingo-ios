@@ -43,10 +43,10 @@ class ProgressViewController: UIViewController {
         cancelButton.frame.size = CGSize(width: self.view.bounds.midX, height:  45)
         cancelButton.center.x = self.view.bounds.midX
         cancelButton.center.y = self.view.bounds.midY + 100
-        cancelButton.backgroundColor = FlatWhite()
+        cancelButton.backgroundColor = UIColor.clear
         cancelButton.tag = 1
         cancelButton.setTitle("Cancel, I'm safe.", for: [])
-        cancelButton.setTitleColor(mainColor, for: [])
+        cancelButton.setTitleColor(pink, for: [])
         cancelButton.addTarget(self, action: #selector(cancelJourney(_:)), for: .touchUpInside)
         
         self.view.addSubview(cancelButton)
