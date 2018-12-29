@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+
 
 class LogOutViewController: UIViewController {
+    
     var w: CGFloat!
     var h: CGFloat!
     
@@ -20,6 +23,10 @@ class LogOutViewController: UIViewController {
         view.isOpaque = false
         print("in logout screen")
         drawAlert()
+        print(self.presentingViewController)
+        print(self.view.window?.rootViewController)
+
+
     }
     
     func drawAlert() {
@@ -63,8 +70,20 @@ class LogOutViewController: UIViewController {
     }
     
     @objc func logOut(_ sender: Any?) {
-        dismiss(animated: true, completion: nil)
+        // let loginManager = FBSDKLoginManager()
+        // loginManager.logOut()
+        print("log out clicked")
+//        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: {
+//            UIApplication.shared.keyWindow?.rootViewController?.navigationController?.popToRootViewController(animated: true)
+//            })
+
+        // self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+
+        // self.navigationController?.popToRootViewController(animated: true)
+        
+        self.performSegue(withIdentifier: "unwindSegueToSplash", sender: nil)
     }
+    
     
     @objc func cancel(_ sender: Any?) {
         dismiss(animated: true, completion: nil)
@@ -78,5 +97,4 @@ class LogOutViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -83,7 +83,7 @@ class SelectFriendsViewController: UIViewController, UITableViewDelegate, UITabl
         view.addSubview(head)
         
         tableView = UITableView(frame: CGRect(x: 0, y:135, width: view.frame.width, height: view.frame.height-135),
-                                style: UITableViewStyle.plain)
+                                style: UITableView.Style.plain)
         tableView.register(SelectFriendsTableViewCell.self, forCellReuseIdentifier: "selectFriendCell")
         tableView.clipsToBounds = true
         tableView.rowHeight = 100

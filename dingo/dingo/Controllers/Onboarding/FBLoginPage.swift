@@ -100,12 +100,12 @@ class FBLoginPage: UIViewController, LoginButtonDelegate {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationNavigationController = segue.destination as? UINavigationController {
-            destinationNavigationController.isNavigationBarHidden = true
-            let destination = destinationNavigationController.topViewController as! SelectFriendsViewController
+        
+        if let destination = segue.destination as? SelectFriendsViewController {
             destination.currentUser = newUser
         }
     }
+    
     @IBAction func unwindToStart(segue:UIStoryboardSegue) { }
 }
 

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
-class ModalViewController: UIViewController {
+class ModalViewController: UIViewController, FBSDKLoginButtonDelegate  {
 
     var cancelButton: UIButton!
     var w: CGFloat!
@@ -24,7 +25,7 @@ class ModalViewController: UIViewController {
         // Do any additional setup after loading the view.
         drawCancel()
         drawOptions()
-        
+        drawLogInButton()
     }
     
     func drawCancel() {
@@ -100,5 +101,25 @@ class ModalViewController: UIViewController {
         let logoutVC = LogOutViewController()
         logoutVC.modalPresentationStyle = .overCurrentContext
         self.present(logoutVC, animated: true)
+    }
+    
+    func drawLogInButton() {
+        let loginButton = FBSDKLoginButton()
+        loginButton.delegate = self
+        loginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 100, height: 40)
+        loginButton.center.x = self.view.bounds.midX
+        loginButton.center.y = view.frame.height - 70
+        //To add permissions
+        loginButton.readPermissions = ["user_friends", "public_profile"]
+        view.addSubview(loginButton)
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("logging out")
+        self.performSegue(withIdentifier: "unwindSegueToLogIn", sender: self)
     }
 }

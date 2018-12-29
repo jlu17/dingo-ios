@@ -20,6 +20,8 @@
 		1019A87621CC1A22004381B3 /* OnboardingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019A87521CC1A22004381B3 /* OnboardingHelper.swift */; };
 		1019A87A21CC5A37004381B3 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019A87921CC5A36004381B3 /* ModalViewController.swift */; };
 		1019A87D21CD65FE004381B3 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019A87C21CD65FE004381B3 /* LogOutViewController.swift */; };
+		101D7E0621D6FD4A0077DFCD /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D7E0521D6FD4A0077DFCD /* NotificationsTableViewCell.swift */; };
+		101D7E0821D705530077DFCD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D7E0721D705530077DFCD /* SplashViewController.swift */; };
 		101E5B5F207B08E4007783C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */; };
 		101E5B61207B38A5007783C2 /* SelectFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */; };
 		101E5B63207B3BC1007783C2 /* SelectMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E5B62207B3BC1007783C2 /* SelectMapViewController.swift */; };
@@ -30,7 +32,6 @@
 		105F22B32060AA6A00ABF98E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22B22060AA6A00ABF98E /* AppDelegate.swift */; };
 		105F22B82060AA6A00ABF98E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105F22B62060AA6A00ABF98E /* Main.storyboard */; };
 		105F22BA2060AA6A00ABF98E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105F22B92060AA6A00ABF98E /* Assets.xcassets */; };
-		105F22BD2060AA6A00ABF98E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105F22BB2060AA6A00ABF98E /* LaunchScreen.storyboard */; };
 		105F22C82060AA6A00ABF98E /* dingoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22C72060AA6A00ABF98E /* dingoTests.swift */; };
 		105F22D32060AA6A00ABF98E /* dingoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105F22D22060AA6A00ABF98E /* dingoUITests.swift */; };
 		1084436B2075BF93007EBF69 /* FBLoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1084436A2075BF93007EBF69 /* FBLoginPage.swift */; };
@@ -78,6 +79,8 @@
 		1019A87521CC1A22004381B3 /* OnboardingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHelper.swift; sourceTree = "<group>"; };
 		1019A87921CC5A36004381B3 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		1019A87C21CD65FE004381B3 /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
+		101D7E0521D6FD4A0077DFCD /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
+		101D7E0721D705530077DFCD /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		101E5B5D207AE738007783C2 /* dingo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dingo.entitlements; sourceTree = "<group>"; };
 		101E5B5E207B08E4007783C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		101E5B60207B38A5007783C2 /* SelectFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendsViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +93,6 @@
 		105F22B22060AA6A00ABF98E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		105F22B72060AA6A00ABF98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		105F22B92060AA6A00ABF98E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		105F22BC2060AA6A00ABF98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		105F22BE2060AA6A00ABF98E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		105F22C32060AA6A00ABF98E /* dingoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dingoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		105F22C72060AA6A00ABF98E /* dingoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dingoTests.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				10AA3D4D20FC6CA70076969A /* SelectFriendsTableViewCell.swift */,
+				101D7E0521D6FD4A0077DFCD /* NotificationsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 		100233C420816E3200C3E08D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				101D7E0721D705530077DFCD /* SplashViewController.swift */,
 				100EEB21210AA29A002246A4 /* Onboarding */,
 				1019A87B21CD655A004381B3 /* Settings */,
 				108CFF8C209C201C003A6BB5 /* ChangeFriendViewController.swift */,
@@ -263,7 +267,6 @@
 				100233C620816E8700C3E08D /* Clients */,
 				100233C220816E2400C3E08D /* Models */,
 				105F22B92060AA6A00ABF98E /* Assets.xcassets */,
-				105F22BB2060AA6A00ABF98E /* LaunchScreen.storyboard */,
 				105F22B62060AA6A00ABF98E /* Main.storyboard */,
 				105F22BE2060AA6A00ABF98E /* Info.plist */,
 				100233C320816E2D00C3E08D /* Cells */,
@@ -387,6 +390,7 @@
 				TargetAttributes = {
 					105F22AE2060AA6A00ABF98E = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -396,11 +400,13 @@
 					};
 					105F22C22060AA6A00ABF98E = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 105F22AE2060AA6A00ABF98E;
 					};
 					105F22CD2060AA6A00ABF98E = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 105F22AE2060AA6A00ABF98E;
 					};
@@ -431,7 +437,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				105F22BD2060AA6A00ABF98E /* LaunchScreen.storyboard in Resources */,
 				101E5B5F207B08E4007783C2 /* GoogleService-Info.plist in Resources */,
 				105F22BA2060AA6A00ABF98E /* Assets.xcassets in Resources */,
 				10350E6D21CD909000838384 /* OpenSans-Regular.ttf in Resources */,
@@ -582,11 +587,13 @@
 				1019A87621CC1A22004381B3 /* OnboardingHelper.swift in Sources */,
 				1019A87A21CC5A37004381B3 /* ModalViewController.swift in Sources */,
 				100233C820816ECF00C3E08D /* FirebaseAPIClient.swift in Sources */,
+				101D7E0821D705530077DFCD /* SplashViewController.swift in Sources */,
 				1019A87021CB454B004381B3 /* Onboarding2ViewController.swift in Sources */,
 				1088897C20F16047001F961C /* Constants.swift in Sources */,
 				108CFF8F209C202A003A6BB5 /* AboutViewController.swift in Sources */,
 				10AA3D4E20FC6CA70076969A /* SelectFriendsTableViewCell.swift in Sources */,
 				105F22B32060AA6A00ABF98E /* AppDelegate.swift in Sources */,
+				101D7E0621D6FD4A0077DFCD /* NotificationsTableViewCell.swift in Sources */,
 				1019A87D21CD65FE004381B3 /* LogOutViewController.swift in Sources */,
 				10AA3D4C20FC04C90076969A /* SwiftyAPIClient.swift in Sources */,
 			);
@@ -630,14 +637,6 @@
 				105F22B72060AA6A00ABF98E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		105F22BB2060AA6A00ABF98E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				105F22BC2060AA6A00ABF98E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -766,7 +765,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sep.dingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -787,7 +786,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sep.dingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -804,7 +803,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dingo-sep.dingoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dingo.app/dingo";
 			};
@@ -822,7 +821,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dingo-sep.dingoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dingo.app/dingo";
 			};
@@ -839,7 +838,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dingo-sep.dingoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = dingo;
 			};
@@ -856,7 +855,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dingo-sep.dingoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = dingo;
 			};

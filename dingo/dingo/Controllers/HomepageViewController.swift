@@ -33,6 +33,7 @@ class HomepageViewController: UIViewController {
         drawDefaults()
         drawSettingsButton()
         drawNotificationsButton()
+        // xsprint(self.view.window!.rootViewController)
     }
     
     func drawStartButton() {
@@ -143,6 +144,7 @@ class HomepageViewController: UIViewController {
     @objc func startJourney(_ Sender: Any?) {
         print("Circle clicked!")
         performSegue(withIdentifier: "homepageToProgress", sender: nil)
+
     }
     
     @objc func notifications(_ Sender: Any?) {

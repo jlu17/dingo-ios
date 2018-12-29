@@ -97,11 +97,11 @@ class AboutViewController: UIViewController {
         
         let d = NSMutableAttributedString(
             string: "Dingo was the child of 7 students who wanted to make the Berkeley atmosphere a little safer. \n \n Questions? Bugs? \n jennifer.lu@berkeley.edu",
-            attributes: [NSAttributedStringKey.font:UIFont(
+            attributes: [NSAttributedString.Key.font:UIFont(
                 name: mainFont,
                 size: 16)!])
         
-        d.addAttribute(NSAttributedStringKey.font,
+        d.addAttribute(NSAttributedString.Key.font,
                        value: UIFont(
                        name: boldFont,
                        size: 16)!,
